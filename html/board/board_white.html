@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항</title>
+    <link rel="stylesheet" href="css/borad.css">
+</head>
+<body>
+    <div style="display:none" class="scroll">
+        <p>아래로 스크롤 해주세요.</p>
+        <img src="../../assets/img/site_intro_scroll.png" alt="">
+    </div>
+    <div class="wrap">
+        <div class="site">
+            <div class="header">
+                <div class="header_inner">
+                    <img src="../../assets/img/site_header_logo.png" alt="logo">
+                    <p>공지사항</p>
+                    <p>이벤트</p>
+                    <p>이달의 순위</p>
+                    <p>일기쓰기</p>
+                    <p>꾸미기</p>
+                    <p>정보</p>
+                    <p>고객센터</p>
+                    <div class="profile_cont">
+                        <img src="../../assets/img/site_header_profile.png" alt="logo">
+                        <img src="../../assets/img/site_header_profile_heart.png" alt="logo">
+                    </div>
+                </div>
+            </div>
+            <div class="board">
+                <a class="modify_btn" href="board_white.html">수정</a>
+                <!-- <a href="boardModify.php?myBoardID=<?=$myBoardID?>">수정</a> -->
+                <div class="board_info">
+                    <img class="notice_logo" src="../../assets/img/site_board_notice_logo.png" alt="">
+                    <h2>NOTICE</h2>
+                    <p>공지사항은 이곳에서 확인해주세요!</p>
+                    <img src="../../assets/img/site_board_notice_cross.png" alt="">
+                    <!-- <div class="section_selector">
+                        <a class="select" href="#">공지사항</a>
+                        <a href="#">이벤트</a>
+                    </div> -->
+                </div>
+                <div class="section_selector">
+                    <a class="select" href="board.html">공지사항</a>
+                    <a href="board.html">이벤트</a>
+                </div>
+                <div class="board__view">   
+                    <h3>제목</h3>
+                    <div>콘텐츠 - 내용</div>
+                    <form action=""></form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

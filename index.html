@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 꾸다 - 인덱스 </title>
+    <style>
+        @import url('https://webfontworld.github.io/score/SCoreDream.css');
+        @import url('https://webfontworld.github.io/NanumSquare/NanumSquare.css');
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            margin: 0 auto;
+            font-family: 'NanumSquare';
+            font-weight: 700;
+            font-size: 40px;
+        }
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #000;
+        }
+
+        ul,li {
+            list-style: none;
+        }
+
+        .wrap {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1160px;
+            margin: 0 auto;
+        }
+
+        .html, .php, .figma {
+            width: 33.333%;
+            margin: 0 auto;
+            text-align: center;
+            font-family: 'SCoreDream';
+            font-weight: bold;
+            color: #4B12A7;
+            position: relative;
+            /* padding: 40px; */
+        }
+
+        .hover {
+            color: #000;
+            margin-bottom: 40px;
+            font-size: 22px;
+        }
+        .hover:hover {
+            color: #4B12A7;
+        }
+
+        /* 전체 */
+        .AllTopDown{
+            padding: 60px 0;
+        }
+
+        .wrap div:nth-child(3) .F_cont ul{
+            border-right:none;
+        }
+
+        /* 피그마 : 로그인 */
+        .F_cont ul{
+            border-right:0.5px solid #ededed;
+            padding: 0 25px;
+        }
+        
+        .F_cont h2 {
+            font-size: 22px;
+            font-family: 'SCoreDream';
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: left;
+            padding: 0 25px;
+            border-left: 2px solid #4b12a7;
+        }
+        .F_cont ul {
+            text-align: left;
+            font-size: 20px;
+            margin-bottom: 60px;
+        }
+        .F_cont ul:last-child {
+            margin-bottom: 0px;
+        }
+        .F_cont ul li {
+            /* border-bottom: Dashed 1px #ededed; */
+            padding: 15px 0;
+        }
+        .F_cont ul li a {
+            font-weight: normal;
+            font-size: 16px;
+        }
+        .F_cont ul li:hover {
+            background: #f1f1f485;
+            border-radius: 50px;
+            padding: 15px 0px 15px 51px;
+            transition: 0.25s;
+            backdrop-filter: blur(8px);
+        }
+        .F_cont ul li:hover a{
+            color: #5513bf;
+        }
+        .F_cont ul li:not(:hover){
+            transition: 0.25s;
+        }
+
+        /* 이미지 */
+        .sticker{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1000;
+        }
+        .sticker img{
+            position: fixed;
+            opacity: 0.2;
+        }
+        .sticker img:nth-child(1){bottom: 180px; left: 426px; transform: scale(1.9);}
+        .sticker img:nth-child(2){top: 525px; right: 224px; transform: scale(1.3);}
+        .sticker img:nth-child(3){top: 240px; left: 29px; filter: blur(1px);}
+        .sticker img:nth-child(4){top: 46px; right: 130px; transform: scale(1.1);}
+        .sticker img:nth-child(5){bottom: 28px; left: 216px; filter: blur(3px); filter: blur(2px);}
+        .sticker img:nth-child(6){top: -344px; right: 187px; transform: rotate(45deg);}
+
+    </style>
+</head>
+<body class="AllTopDown">
+    <h2 style="text-align: center; font-size:50px; font-family: 'SCoreDream'; margin-bottom: 70px;">2조 iNDEX・꾸다</h2>
+    <div class="wrap">
+        <div class="figma">
+            <a href="https://www.figma.com/file/JfmnC5oLEfHDRkkT8obVcE/Untitled?node-id=0%3A1" target="_blank"><h2 class="hover">Figma</h2></a>
+            <div class="F_cont">
+                <h2>로그인•회원가입</h2>
+                <ul class="F_login">
+                    <li><a href="Figma/Figma_login/F_login.html">01. 로그인 팝업창</a></li>
+                    <li><a href="Figma/Figma_login/F_ID.html">02. 아이디 찾기</a></li>
+                    <li><a href="Figma/Figma_login/F_password.html">03. 비밀번호 찾기</a></li>
+                    <li><a href="Figma/Figma_login/F_ID_clear.html">04. 아이디 찾기 완료</a></li>
+                    <li><a href="Figma/Figma_login/F_password_clear.html">05. 비밀번호 찾기 완료</a></li>
+                    <li><a href="Figma/Figma_login/F_OK.html">06. 이용약관 동의</a></li>
+                    <li><a href="Figma/Figma_login/F_ing.html">07. 회원가입 정보 입력</a></li>
+                    <li><a href="Figma/Figma_login/F_clear.html">08. 회원가입 완료</a></li>
+                    <li><a href="Figma/Figma_login/F_bye.html">09. 회원 탈퇴 확인</a></li>
+                    <li><a href="Figma/Figma_login/F_byebye.html">10. 회원 탈퇴 완료</a></li>
+                </ul>
+                <h2>게시판</h2>
+                <ul class="F_board">
+                    <li><a href="Figma/Figma_notion/F_notion.html">01. 공지사항 메인</a></li>
+                    <li><a href="Figma/Figma_notion/F_notionOK.html">02. 공지사항 보기</a></li>
+                    <li><a href="Figma/Figma_notion/F_boardWhite.html">03. 공지사항 글쓰기</a></li>
+                    <li><a href="Figma/Figma_notion/F_notionNOT.html">04. 공지사항 수정</a></li>
+                    <li><a href="Figma/Figma_notion/F_notionNOTbye.html">05. 공지사항 수정 완료</a></li>
+                    <li><a href="Figma/Figma_notion/F_board.html">06. 게시판 메인</a></li>
+                    <li><a href="Figma/Figma_notion/F_boardOK.html">07.게시판 보기</a></li>
+                    <li><a href="Figma/Figma_notion/F_boardWhite.html">08. 게시판 글쓰기</a></li>
+                    <li><a href="Figma/Figma_notion/F_boardNOT.html">09. 게시판 수정</a></li>
+                    <li><a href="Figma/Figma_notion/F_boardNOTbye.html">10. 게시판 수정 완료</a></li>
+                    <li><a href="Figma/Figma_notion/F_boardSearch.html">11. 게시판 검색</a></li>
+                    <li><a href="Figma/Figma_notion/F_boardDt.html">12. 게시판 삭제</a></li>
+                    <li><a href="Figma/Figma_notion/F_FQA.html">13. FQA 보기</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="html">
+            <a href="board/board.html" target="_blank"><h2 class="hover">html</h2></a>
+            <div class="F_cont">
+                <h2>로그인•회원가입</h2>
+                <ul class="H_login">
+                    <li><a href="LOGIN/login__popup.html">01. 로그인 팝업창</a></li>
+                    <li><a href="LOGIN/login__searchID.html">02. 아이디 찾기</a></li>
+                    <li><a href="LOGIN/login__searchPass.html">03. 비밀번호 찾기</a></li>
+                    <li><a href="LOGIN/search_complete.html">04. 아이디 찾기 완료</a></li>
+                    <li><a href="LOGIN/search_complete.html">05. 비밀번호 찾기 완료</a></li>
+                    <li><a href="LOGIN/join_agree.html">06. 이용약관 동의</a></li>
+                    <li><a href="LOGIN/join_insert.html">07. 회원가입 정보 입력</a></li>
+                    <li><a href="LOGIN/complete.html">08. 회원가입 완료</a></li>
+                    <li><a href="LOGIN/login_bye.html">09. 회원 탈퇴 확인</a></li>
+                    <li><a href="LOGIN/login_byeComple.html">10. 회원 탈퇴 완료</a></li>
+                </ul>
+                <h2>게시판</h2>
+                <ul class="H_board">
+                    <li><a href="board/board.html">01. 공지사항 메인</a></li>
+                    <li><a href="board/board_view.html">02. 공지사항 보기</a></li>
+                    <li><a href="board/board_write.html">03. 공지사항 글쓰기</a></li>
+                    <li><a href="board/board_Modify.html">04. 공지사항 수정</a></li>
+                    <li><a href="board/board_ModifySave.html">05. 공지사항 수정 완료</a></li>
+                    <li><a href="board/board_Remove.html">06. 공지사항 삭제</a></li>
+                    <li><a href="">07. 게시판 메인</a></li>
+                    <li><a href="">08.게시판 보기</a></li>
+                    <li><a href="">09. 게시판 글쓰기</a></li>
+                    <li><a href="">10. 게시판 수정</a></li>
+                    <li><a href="">11. 게시판 수정 완료</a></li>
+                    <li><a href="">12. 게시판 검색</a></li>
+                    <li><a href="">13. 게시판 삭제</a></li>
+                    <li><a href="">14. FQA 보기</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="php">
+            <a href="" target="_blank"><h2 class="hover">PHP</h2></a>
+            <div class="F_cont">
+                <ul>
+                    <li><a href="connect/connect.php">연결확인</a></li>
+                    <li><a href="create/createJoin.php">테이블 만들기</a></li>
+                </ul>
+                <ul>
+                    <li><a href="PHP/login/login.php">로그인 창</a></li>
+                    <li><a href="PHP/login/logout.php">로그아웃</a></li>
+                    <li><a href="PHP/join/joinAgree.php">이용약관 확인</a></li>
+                    <li><a href="PHP/join/join.php">회원 가입</a></li>
+                </ul>
+                <ul>
+                    <li><a href="PHP/main/main.php">메인</a></li>
+                </ul>
+                <ul>
+                    <li><a href="PHP/board/board.php">공지사항</a></li>
+                    <li><a href="PHP/board/boardView.php">공지사항 보기</a></li>
+                    <li><a href="PHP/board/boardModify.php">공지사항 수정</a></li>
+                    <li><a href="PHP/board/boardWrite.php">공지사항 글쓰기</a></li>
+                    <li><a href="create/createBoard.php">공지사항 테이블 만들기</a></li>
+                    <li><a href="create/createBoardData.php">공지사항 글 만들기</a></li>
+                </ul>
+                <ul>
+                    <li><a href="PHP/event/event.php">이벤트</a></li>
+                    <li><a href="PHP/event/eventView.php">이벤트 보기</a></li>
+                    <li><a href="PHP/event/eventModify.php">이벤트 수정</a></li>
+                    <li><a href="PHP/event/eventWrite.php">이벤트 글쓰기</a></li>
+                    <li><a href="create/createEvent.php">이벤트 테이블 만들기</a></li>
+                    <li><a href="create/createEventData.php">이벤트 글 만들기</a></li>
+                </ul>
+            </div>
+            <div class="F_cont" style="display: none;">
+                <h2>로그인•회원가입</h2>
+                <ul class="P_login">
+                    <li><a href="#">01. 로그인 팝업창</a></li>
+                    <li><a href="#">02. 아이디 찾기</a></li>
+                    <li><a href="#">03. 비밀번호 찾기</a></li>
+                    <li><a href="#">04. 아이디 찾기 완료</a></li>
+                    <li><a href="#">05. 비밀번호 찾기 완료</a></li>
+                    <li><a href="#">06. 이용약관 동의</a></li>
+                    <li><a href="#">07. 회원가입 정보 입력</a></li>
+                    <li><a href="#">08. 회원가입 완료</a></li>
+                    <li><a href="#">09. 회원 탈퇴 확인</a></li>
+                    <li><a href="#l">10. 회원 탈퇴 완료</a></li>
+                </ul>
+                <h2>게시판</h2>
+                <ul class="P_board">
+                    <li><a href="">01. 공지사항 메인</a></li>
+                    <li><a href="">02. 공지사항 보기</a></li>
+                    <li><a href="">03. 공지사항 글쓰기</a></li>
+                    <li><a href="">04. 공지사항 수정</a></li>
+                    <li><a href="">05. 공지사항 수정 완료</a></li>
+                    <li><a href="">06. 공지사항 삭제</a></li>
+                    <li><a href="">07. 게시판 메인</a></li>
+                    <li><a href="">08.게시판 보기</a></li>
+                    <li><a href="">09. 게시판 글쓰기</a></li>
+                    <li><a href="">10. 게시판 수정</a></li>
+                    <li><a href="">11. 게시판 수정 완료</a></li>
+                    <li><a href="">12. 게시판 검색</a></li>
+                    <li><a href="">13. 게시판 삭제</a></li>
+                    <li><a href="">14. FQA 보기</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="sticker">
+        <img src="assets/img/star.png"alt="별">
+        <img src="assets/img/star.png"alt="별">
+        <img src="assets/img/star.png"alt="별">
+        <img src="assets/img/star.png"alt="별">
+        <img src="assets/img/star.png"alt="별">
+        <img src="assets/img/Vector 7.png"alt="스트로크">
+    </div>
+</body>
+</html>

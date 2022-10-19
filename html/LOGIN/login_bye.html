@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN -  회원 탈퇴</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="login__popup">
+        <div class="login__inner">
+            <div class="login__header">
+                <img src="../../assets/img/bye_logo.png" alt="">
+                <h3 class="txt-black">BYE...?</h3>
+                <div class="login-txt">
+                    <p class="txt-black">회원 탈퇴를 진행합니다.<br>
+                        동의시 하단의 링크를 클릭해주세요..!
+                    </p>
+                </div>
+                <img class="login-cross"src="../../assets/img/login_cross.png" alt="">
+            </div>
+            <div class="login__cont">
+                <form name="search" action="searchSave.php" method="post">
+                    <fieldset>
+                        <legend class="ir">회원 탈퇴를 진행 중인 폼입니다.</legend>    
+                        <button type="submit" class="input__Btn red">탈퇴하기</button>
+                        <button type="submit" class="input__Btn red white">닫기</button>
+                    </fieldset>
+                </form>
+            </div>
+            <button type="button" class="btn-close"><img src="../../assets/img/login_close.png" alt=""></button>
+        </div>
+    </div>
+</body>
+</html>

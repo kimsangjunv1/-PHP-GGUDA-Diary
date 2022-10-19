@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'PyeongChangPeace';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChangPeace-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChangPeace-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChangPeace-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChangPeace-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChangPeace-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'PyeongChangPeace';
+    width: 100%;
+    height: 100vh;
+    background-color: #E0E3DA;
+}
+h2 {
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 50px;
+    font-size: 50px;
+    color: #5c6e6c;
+}
+.F_frame {
+    display: block;
+    text-align: center;
+    justify-content: center;
+}

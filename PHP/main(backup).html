@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 꾸다 - 인덱스 </title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<?php include "../include/header.php" ?>
+    <!-- //header -->
+<body>
+    
+    <div class="scroll">
+        <p>스크롤을 내려보세요.</p>
+        <img src="../assets/img/site_intro_scroll.png" alt="">
+    </div>
+    <div class="wrap">
+        <div style="display:none" class="login__popup">
+            <div class="login__inner">
+                <div class="login__header">
+                    <img src="../assets/img/login_logo.png" alt="">
+                    <h3>LOGIN</h3>
+                    <div class="login-txt">
+                        <p>개인정보를 이곳에 입력해주세요!</p>
+                        <p class="fail">아이디 비밀번호를 다시 확인해주세요!</p>
+                    </div>
+                    <img class="login-cross" src="../assets/img/login_cross.png" alt="">
+                </div>
+                <div class="login__cont">
+                    <form name="login" action="loginSave.php" method="post">
+                        <fieldset>
+                            <legend class="ir">로그인 입력폼</legend>
+                            <div>
+                                <label for="youEmail" class="ir">이메일</label>
+                                <input type="email" name="youEmail" id="youEmail" placeholder="이메일" class="input__style"
+                                    required>
+                            </div>
+                            <div>
+                                <label for="youPass" class="ir">비밀번호</label>
+                                <input type="password" name="youPass" id="youPass" placeholder="비밀번호"
+                                    class="input__style" required>
+                            </div>
+                            <div class="btom-btn">
+                                <a href="#">아이디 찾기</a>
+                                <a href="#">비밀번호 찾기</a>
+                                <a href="#">회원가입</a>
+                            </div>
+                            <hr class="login-divider">
+                            <button type="submit" class="input__Btn">로그인</button>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="login__footer">
+                </div>
+                <button type="button" class="btn-close"><img src="../assets/img/login_close.png" alt=""></button>
+            </div>
+        </div>
+        <span class="btn_scroll_top">
+            <a href="#">^</a>
+        </span>
+        <div class="site">
+            <div class="header">
+                <div class="header_inner">
+                    <img style="padding-right: 20px;" src="../assets/img/site_header_logo.png" alt="logo">
+                    <p>공지사항</p>
+                    <p>이벤트</p>
+                    <p>이달의 순위</p>
+                    <p>일기쓰기</p>
+                    <p>꾸미기</p>
+                    <p>정보</p>
+                    <p>고객센터</p>
+                    <div class="profile_cont" alt="로그인한 프로파일 이미지">
+                        <img src="../assets/img/site_header_profile.png" alt="logo">
+                        <img src="../assets/img/site_header_profile_heart.png" alt="logo">
+                    </div>
+                </div>
+            </div>
+            <div class="intro">
+                <div class="intro_page one">
+                    <div class="logo__cont">
+                        <img src="../assets/img/site_intro_logo.png" alt="">
+                        <p>“너가 상상한 <em>그 모든것</em> 여기서 꿈을 <em>꾸다</em>.”</p>
+                    </div>
+                    <img src="../assets/img/site_intro_stroke.svg" alt="">
+                    <div style="position:absolute; bottom: 25px;">
+                        <div class="cover">
+                            <p class="first-parallel"></p>
+                        </div>
+                        <div class="cover">
+                            <p class="second-parallel"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="intro_page two">
+                    <div class="two_text_cont">
+                        <h2>어 왔니?</h2>
+                        <h2><em>다꾸용 물품</em>을(를) 찾아볼까?</h2>
+                        <div style="display:flex; flex-wrap: nowrap; align-items: center;">
+                            <h2 style="display: inline;">모두 모아봤어</h2>
+                            <img style="display: inline;" src="../assets/img/site_intro_arrow.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="intro_page three">
+                    <h2>편집기능까지.</h2>
+                    <!-- <div class="edit_function" alt="편집기능 이미지">
+                        <img src="../assets/img/function_edit_01.png" alt="얉게">
+                        <img src="../assets/img/function_edit_02.png" alt="두껍게">
+                        <img src="../assets/img/function_edit_03.png" alt="밑줄">
+                        <img src="../assets/img/function_edit_04.png" alt="배경색상">
+                        <img src="../assets/img/function_edit_05.png" alt="글씨색상">
+                        <img src="../assets/img/function_edit_06.png" alt="정렬">
+                    </div> -->
+                    <div class="edit_function" alt="편집기능 이미지">
+                        <button id="btn-bold">
+                            <b>가</b>
+                        </button>
+                        <button id="btn-italic">
+                            <i>가</i>
+                        </button>
+                        <button id="btn-underline">
+                            <u>가</u>
+                        </button>
+                        <button id="btn-strike">
+                            <s>가</s>
+                        </button>
+                        <button id="btn-ordered-list">
+                            1.
+                        </button>
+                        <button id="btn-unordered-list">
+                            •.
+                        </button>
+                        <button id="btn-image">
+                            이미지
+                        </button>
+                        <input type="file" name="uploadfile" id="img-selector" accept="image/*" style="display:none;"/>
+                    </div>
+                    <div class="intro_input" id="editor" contenteditable="true" placeholder="여기에 입력해주세요" ></div>
+                    <!-- <div class="gguda_desc">
+                        
+                    </div> -->
+                    <div class="sticker_cont">
+                        <p>원하는 스티커를 본문에 드래그 해보세요!</p>
+                        <div style="display:flex">
+                            <img class="sticker" src="../assets/img/function_edit_sticker_01.png" alt="얉게">
+                            <img class="sticker" src="../assets/img/function_edit_sticker_02.png" alt="얉게">
+                            <img class="sticker" src="../assets/img/function_edit_sticker_03.png" alt="얉게">
+                            <img class="sticker" src="../assets/img/function_edit_sticker_04.png" alt="얉게">
+                            <img class="sticker" src="../assets/img/function_edit_sticker_05.png" alt="얉게">
+                        </div>
+                    </div>
+                </div>
+                <div class="intro_page four">
+                    <div class="four_text_cont">
+                        <h2>어~~~</h2>
+                        <h2>이제 같이</h2>
+                        <h2>드가자.</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="youtube">
+                    <h2>YOUTUBE</h2>
+                    <p>테스트</p>
+                    <img class="cross" src="../assets/img/site_main_cross.png" alt="">
+                    <div class="youtube_cont">
+                        <div class="youtube_cont_item_01">
+                            <img src="../assets/img/youtube_play_icon.png" alt="">
+                            <img src="../assets/img/youtube_thumb_01.png" alt="">
+                            <p>TIP</p>
+                            <h2>안녕하세요</h2>
+                            <p>너만 모르는 한가지 사실...!</p>
+                        </div>
+                        <div class="youtube_cont_item_01">
+                            <img src="../assets/img/youtube_play_icon.png" alt="">
+                            <img src="../assets/img/youtube_thumb_01.png" alt="">
+                            <p>TIP</p>
+                            <h2>안녕하세요</h2>
+                            <p>너만 모르는 한가지 사실...!</p>
+                        </div>
+                        <div class="youtube_cont_item_01">
+                            <img src="../assets/img/youtube_play_icon.png" alt="">
+                            <img src="../assets/img/youtube_thumb_01.png" alt="">
+                            <p>TIP</p>
+                            <h2>안녕하세요</h2>
+                            <p>너만 모르는 한가지 사실...!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="notice">
+                    <h2>YOUTUBE</h2>
+                    <p>테스트</p>
+                    <img class="cross" src="../assets/img/site_main_cross.png" alt="">
+                    <div class="notice_desc_cont">
+                        <div class="notice_quick_cont"></div>
+                        <div class="notice_list_cont"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    //파티클 생성 10개
+    //설명 : 파티클(작은거/큰거) 하나하나 태그로 넣기에는 너무 길어져서 사용함
+    
+    const q = document.querySelector(".intro_page");
+    let size_que = Math.floor(Math.random() * 5) + 1;
+
+    for (let i = 1; i < 10; i++) {
+        if (i % 2 == 0) {
+            q.innerHTML += "<img class='particle' src='../assets/img/site_intro_particle_001.png' alt=''>"
+        } else {
+            q.innerHTML += "<img class='particle' src='../assets/img/site_intro_particle_002.png' alt=''>"
+        }
+    }
+
+
+
+    //marquee 효과 구현
+    //설명 : 기본적으로 천천히 흘러가고 스크롤에 따라 더 빠르게 흐름
+    const pTag1 = document.querySelector('.first-parallel')
+    const pTag2 = document.querySelector('.second-parallel')
+
+    const textArr1 =
+        'DREAMS BECOME TRUE ← [GGUDA] ← DREAMS BECOME TRUE ← [GGUDA] ← DREAMS BECOME TRUE ← [GGUDA] ← DREAMS BECOME TRUE ← [GGUDA] ← DREAMS BECOME TRUE ← [GGUDA] ← DREAMS BECOME TRUE ← [GGUDA] ←'
+        .split(' ')
+    const textArr2 =
+        'DREAMS BECOME TRUE → [GGUDA] → DREAMS BECOME TRUE → [GGUDA] → DREAMS BECOME TRUE → [GGUDA] → DREAMS BECOME TRUE → [GGUDA] → DREAMS BECOME TRUE → [GGUDA] → DREAMS BECOME TRUE → [GGUDA] →'
+        .split(' ')
+
+    let count1 = 0
+    let count2 = 0
+
+    initTexts(pTag1, textArr1)
+    initTexts(pTag2, textArr2)
+
+    function initTexts(element, textArray) {
+        textArray.push(...textArray)
+        for (let i = 0; i < textArray.length; i++) {
+            element.innerText += `${textArray[i]}\u00A0\u00A0\u00A0\u00A0`
+        }
+    }
+
+    function marqueeText(count, element, direction) {
+        if (count > element.scrollWidth / 2) {
+            element.style.transform = `translate3d(0, 0, 0)`
+            count = 0
+        }
+        element.style.transform = `translate3d(${direction * count}px, 0, 0)`
+
+        return count
+    }
+
+    function animate() {
+        count1++
+        count2++
+
+        count1 = marqueeText(count1, pTag1, -1)
+        count2 = marqueeText(count2, pTag2, 1)
+
+        window.requestAnimationFrame(animate)
+    }
+
+    function scrollHandler() {
+        count1 += 15
+        count2 += 15
+    }
+
+    window.addEventListener('scroll', scrollHandler)
+    animate()
+
+
+
+    //스크롤 값에 따라 변경할 클래스 및 효과
+    const header = document.querySelector(".header")
+    const particle = document.querySelectorAll(".particle")
+    const plzScroll = document.querySelector(".scroll")
+    const scrollUp = document.querySelector(".btn_scroll_top")
+
+    function scroll() {
+        let scrollTop = window.pageYoffest || document.documentElement.scrollTop || window.screenY;
+        
+        particle.forEach((e, i) => {
+            if (scrollTop >= 100) {
+                header.classList.add("header_ctrl");
+                plzScroll.style.opacity = "0";
+                scrollUp.style.opacity = "1";
+                e.style.opacity = "0.2"
+            } else {
+                header.classList.remove("header_ctrl");
+                plzScroll.style.opacity = "1";
+                scrollUp.style.opacity = "0";
+                e.style.opacity = "1"
+            }
+        })
+
+        // document.querySelectorAll(".content__item").forEach(item => {
+        //     if(scrollTop > item.offsetTop-window.innerHeight/2){
+        //         item.classList.add("show")
+        //     }
+        // })
+        requestAnimationFrame(scroll);
+    }
+
+    scroll(); //함수 호출
+
+
+    // 스크롤 TOP 선택시 부드럽게 이동
+    scrollUp.addEventListener("click", (e) => {
+        e.preventDefault(); //이벤트가 발생했을때 걸려있는 링크 이동을 차단 시킴
+        window.scrollTo({
+            left: 0,
+            top: 0,
+            behavior: "smooth"
+        });
+    })
+
+    // 스티커 선택
+    const stickerAll = document.querySelectorAll(".sticker")
+    const size = document.querySelectorAll(".size")
+
+    
+    
+    stickerAll.forEach((item,where)=>{
+        item.onmousedown = function (event) {
+            // size.forEach((e,i)=>{
+            //     e.addEventListener("click", ()=>{
+            //         let sizeInfo = i+1;
+            //         console.log(sizeInfo)
+            //     })
+            // })
+            let shiftX = event.clientX - item.getBoundingClientRect().left;
+            let shiftY = event.clientY - item.getBoundingClientRect().top;
+    
+            item.style.position = 'absolute';
+            item.style.border = '1px dashed #721aff';
+            item.style.borderRadius = '15px';
+            item.style.zIndex = 100;
+            document.body.append(item);
+    
+            moveAt(event.pageX, event.pageY);
+    
+            // 초기 이동을 고려한 좌표 (pageX, pageY)에서
+            // 공을 이동합니다.
+            function moveAt(pageX, pageY) {
+                item.style.left = pageX - shiftX + 'px';
+                item.style.top = pageY - shiftY + 'px';
+            }
+    
+            function onMouseMove(event) {
+                moveAt(event.pageX, event.pageY);
+            }
+    
+            // mousemove로 공을 움직입니다.
+            document.addEventListener('mousemove', onMouseMove);
+    
+            // 공을 드롭하고, 불필요한 핸들러를 제거합니다.
+            item.onmouseup = function () {
+                document.removeEventListener('mousemove', onMouseMove);
+                item.style.border = '1px solid rgba(255, 255, 255, 0)';
+                item.onmouseup = null;
+            };
+    
+        };
+    
+        item.ondragstart = function () {
+            return false;
+        };
+    })
+
+    //텍스트 에디터
+    const editor = document.getElementById('editor');
+    const btnBold = document.getElementById('btn-bold');
+    const btnItalic = document.getElementById('btn-italic');
+    const btnUnderline = document.getElementById('btn-underline');
+    const btnStrike = document.getElementById('btn-strike');
+    const btnOrderedList = document.getElementById('btn-ordered-list');
+    const btnUnorderedList = document.getElementById('btn-unordered-list');
+
+    const btnImage = document.getElementById('btn-image');
+    const imageSelector = document.getElementById('img-selector');
+
+    btnBold.addEventListener('click', function () {
+        setStyle('bold');
+    });
+
+    btnItalic.addEventListener('click', function () {
+        setStyle('italic');
+    });
+
+    btnUnderline.addEventListener('click', function () {
+        setStyle('underline');
+    });
+
+    btnStrike.addEventListener('click', function () {
+        setStyle('strikeThrough')
+    });
+
+    btnOrderedList.addEventListener('click', function () {
+        setStyle('insertOrderedList');
+    });
+
+    btnUnorderedList.addEventListener('click', function () {
+        setStyle('insertUnorderedList');
+    });
+
+    btnImage.addEventListener('click', function () {
+        imageSelector.click();
+    });
+
+    imageSelector.addEventListener('change', function (e) {
+        const files = e.target.files;
+        if (!!files) {
+            insertImageDate(files[0]);
+        }
+    });
+
+    editor.addEventListener('keydown', function () {
+        checkStyle();
+    });
+
+    editor.addEventListener('mousedown', function () {
+        checkStyle();
+    });
+    
+    
+    function setStyle(style) {
+        document.execCommand(style);
+        focusEditor();
+        checkStyle();
+    }
+    
+    function insertImageDate(file) {
+        const reader = new FileReader();
+        reader.addEventListener('load', function (e) {
+            focusEditor();
+            document.execCommand('insertImage', false, `${reader.result}`);
+        });
+        reader.readAsDataURL(file);
+    }
+
+    function checkStyle() {
+        if (isStyle('bold')) {
+            btnBold.classList.add('active');
+        } else {
+            btnBold.classList.remove('active');
+        }
+        if (isStyle('italic')) {
+            btnItalic.classList.add('active');
+        } else {
+            btnItalic.classList.remove('active');
+        }
+        if (isStyle('underline')) {
+            btnUnderline.classList.add('active');
+        } else {
+            btnUnderline.classList.remove('active');
+        }
+        if (isStyle('strikeThrough')) {
+            btnStrike.classList.add('active');
+        } else {
+            btnStrike.classList.remove('active');
+        }
+        if (isStyle('insertOrderedList')) {
+            btnOrderedList.classList.add('active');
+        } else {
+            btnOrderedList.classList.remove('active');
+        }
+        if (isStyle('insertUnorderedList')) {
+            btnUnorderedList.classList.add('active');
+        } else {
+            btnUnorderedList.classList.remove('active');
+        }
+    }
+
+    function isStyle(style) {
+        return document.queryCommandState(style);
+    }
+
+    function setStyle(style) {
+        document.execCommand(style);
+        focusEditor();
+    }
+
+    // 버튼 클릭 시 에디터가 포커스를 잃기 때문에 다시 에디터에 포커스를 해줌
+    function focusEditor() {
+        editor.focus({preventScroll: true});
+    }
+
+    // 마우스를 트래킹하는 파티클
+    // document.querySelector(".wrap").addEventListener("mousemove", (e) => {
+    //         //마우스 좌표 값
+    //         let mousePageX = e.pageX;
+    //         let mousePageY = e.pageY;
+
+    //         // 전체 가로
+    //         let centerPageX = window.innerWidth/2 - mousePageX;
+    //         let centerPageY = window.innerHeight/2 - mousePageY;
+
+
+    //         //포스트 커버 썸내일 움직이기
+    //         for(let q=1; q<=4; q++){
+    //             document.querySelectorAll(".particle").forEach((e,i)=>{
+    //                 e.style.transform = "translate("+ -centerPageX/(q*4)+"px, "+ -centerPageY/(q*4)+"px)";
+    //             })
+    //         }
+    //     })  
+</script>
+
+</html>
