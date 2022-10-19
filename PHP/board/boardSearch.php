@@ -29,7 +29,11 @@
             <div class="board">
                 <a class="write_btn" href="boardWrite.php">글쓰기</a>
                 <div class="board_info">
-                    <img class="notice_logo" src="../../assets/img/site_board_notice_logo.png" alt="">
+                    <img src="../../assets/img/board_header_01.png" class="header_icon_01" alt="">
+                    <img src="../../assets/img/board_header_02.png" class="header_icon_02" alt="">
+                    <img src="../../assets/img/board_header_03.png" class="header_icon_03" alt="">
+                    <img src="../../assets/img/board_header_04.png" class="header_icon_04" alt="">
+                    <img src="../../assets/img/board_header_05.png" class="header_icon_05" alt="">
                     <h2>NOTICE : 검색결과</h2>
 <?php
     if(isset($_GET['page'])){
@@ -39,7 +43,7 @@
     }
 
     function msg($alert){
-        echo "<p>총 ".$alert."건이 검색되었습니다.</p>";
+        echo "<p>총 ".$alert."건이 검색되었습니다!</p>";
     }
 
 
@@ -51,7 +55,8 @@
     $searchKeyword = $connect -> real_escape_string(trim($searchKeyword));
     $searchOption = $connect -> real_escape_string(trim($searchOption));
 
-    $sql = "SELECT b.myBoardID, b.boardTitle, b.boardContents, m.youName, b.regTime, b.boardView, b.boardSection FROM myBoard b JOIN myMember m ON(b.myMemberID = m.myMemberID)";
+    $sql = "SELECT b.myBoardID, b.boardTitle, b.boardContents, m.youName, m.youImageFile, b.regTime, b.boardView, b.boardSection FROM myBoard b JOIN myMember m ON(b.myMemberID = m.myMemberID)";
+    // $sql = "SELECT b.myBoardID, b.boardTitle, b.boardContents, m.youName, b.regTime, b.boardView, b.boardSection FROM myBoard b JOIN myMember m ON(b.myMemberID = m.myMemberID)";
 
     switch($searchOption){
         case "title":
@@ -127,7 +132,8 @@
             for($i=1; $i <= $count; $i++){
                 $info = $result -> fetch_array(MYSQLI_ASSOC);
                 echo "<div class='board_list_contents'>";
-                echo "<img src='../../assets/img/site_header_profile.png' alt='프로필 이미지'>";
+                echo "<p class='contents_boardId'>".$info['myBoardID']."</p>";
+                echo "<img src='../../assets/img/blog/".$info['youImageFile']."' alt='프로필 이미지'>";
                 echo "<h2><a href='boardView.php?myBoardID={$info['myBoardID']}'>".$info['boardTitle']."</a><a href='boardView.php?myBoardID={$info['myBoardID']}'>".$info['boardContents']."</a></h2>";
                 echo "<div class='board_list_contents_info'>";
                 echo "<p class='contents_section'>".$info['boardSection']."</p>";
