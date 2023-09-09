@@ -1,0 +1,75 @@
+.artist{
+    margin-bottom: 50px !important;
+}
+.artist h2 {
+    margin-top: 120px;
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.artist_cross {
+    margin-bottom: 20px;
+}
+.artist_list_item {
+    position: relative;
+    /* margin-right: 20px; */
+    width: 130px;
+    height: 130px;
+    overflow: hidden;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 10px; */
+    border: 1px solid #00000021;
+}
+.artist_list_item:last-child {
+    margin-right: 0;
+}
+
+.artist_cont {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 30vh;
+}
+
+.artist_cont_inner{
+    display: flex;
+    padding: 0 50vw;
+    scroll-snap-type: x mandatory;
+    overflow-y: scroll;
+}
+.artist_cont_inner>div{
+    margin-right: 100px;
+}
+.artist_cont_inner>div:last-child{
+    margin-right: 0px;
+}
+
+.artist_cont div p:nth-child(2){
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+.artist_cont div p:nth-child(3){
+    font-size: 14px;
+    color: #00000069;
+    background: #0000000a;
+    border-radius: 100px;
+    padding: 5px 10px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+.artist_cont>div{
+    margin-right: 30px;
+}
+.artist_cont>div:last-child{
+    margin-right: 0px;
+}
+.artist_heart {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이벤트</title>
+    <title>공지사항</title>
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/board.css">
 </head>
@@ -31,14 +31,16 @@
                     <img class="notice_logo" src="../../assets/img/site_board_edit_complete.png" alt="">
 <?php
     $myEventID = $_POST['myEventID'];
+    $myMemberID = $_SESSION['myMemberID'];
+    
     $eventTitle = $_POST['eventTitle'];
     $eventContents = $_POST['eventContents'];
     $youPass = $_POST['youPass'];
-    $myMemberID = $_SESSION['myMemberID'];
 
-    // $eventTitle = $connect -> real_escape_string($eventTitle);
-    // $eventContents = $connect -> real_escape_string($eventContents);
-    // 위에 꺼 하면 오류가남;; 오ㅐ지..
+    $youPass = sha1("web".$youPass);
+
+    $eventTitle = $connect -> real_escape_string($eventTitle);
+    $eventContents = $connect -> real_escape_string($eventContents);
 
     $sql = "SELECT youPass, myMemberID FROM myMember WHERE myMemberID = {$myMemberID}";
     $result = $connect -> query($sql);
@@ -62,6 +64,8 @@
                 </div>
             </div>
         </div>
+        <?php include "../include/footer.php" ?>
+
     </div>
 </body>
 <script src="../../assets/javascript/common.js"></script>

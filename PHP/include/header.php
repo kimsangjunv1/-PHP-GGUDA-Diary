@@ -1,24 +1,24 @@
 <div class="hamburger_menu">
     <img class="header_menu_close" src="../../assets/img/login_cross.png" alt="">
-    <p>공지사항</p>
-    <p>이벤트</p>
-    <p>이달의 순위</p>
-    <p>일기쓰기</p>
-    <p>꾸미기</p>
-    <p>정보</p>
-    <p>고객센터</p>
+    <a href="../board/board.php">공지사항</a>
+    <a href="../event/event.php">이벤트</a>
+    <!-- <a href="../rank/rank.php">이달의 순위</a> -->
+    <a href="../deco/deco.php">다이어리 만들기</a>
+    <a href="../deco/deco.php">꾸미기/자랑</a>
+    <a href="../tip/tip.php">정보</a>
+    <a href="../faq/faq.php">FAQ</a>
 </div>
 <div class="header">
     <div class="header_inner">
-        <a href="../main/main.php"><img style="padding-right: 20px;" src="../../assets/img/site_header_logo.png" alt="logo"></a>
+        <a href="../main/main.php"><img src="../../assets/img/site_header_logo.png" alt="logo"></a>
         <img class="hamburger_menu_open" src="../../assets/img/hamburger_btn.png" alt="">
         <a href="../board/board.php">공지사항</a>
-        <a href="../board/board.php">이벤트</a>
-        <a href="../board/board.php">이달의 순위</a>
-        <a href="../board/board.php">일기쓰기</a>
-        <a href="../board/board.php">꾸미기</a>
-        <a href="../board/board.php">정보</a>
-        <a href="../board/board.php">고객센터</a>
+        <a href="../event/event.php">이벤트</a>
+        <!-- <a href="../rank/rank.php">이달의 순위</a> -->
+        <a href="../deco/decoDiary.php">다이어리 만들기</a>
+        <a href="../deco/deco.php">꾸미기/자랑</a>
+        <a href="../tip/tip.php">정보</a>
+        <a href="../faq/faq.php">FAQ</a>
     </div>
 </div>
 <div class="profile_cont" alt="로그인한 프로파일 이미지">
@@ -28,7 +28,7 @@
         <?php echo "<img src='../../assets/img/blog/".$_SESSION['youImageFile']."' alt='프로필 이미지' class='profile_image'>"; ?>
         <?php
             echo "<p>";
-            echo "안녕하세요 ".$_SESSION['youName']."님!";
+            echo "<a href='../mypage/myPage.php' class='mypage__btn'></a>안녕하세요 <em>".$_SESSION['youName']."님!</em>";
             echo "</p>";
             ?>
             <span class="btn_scroll_top">
@@ -36,8 +36,8 @@
             </span>
     <?php } else { ?>
         <a style="display:none" href="../login/logout.php" class="profile_cont_close"><img src="../../assets/img/login_cross.png" alt="로그아웃"></a>
-        <img src="../../assets/img/site_header_profile_no.png" class="loginplz" alt="logo">
-        <p>여기를 눌러 로그인!</p>
+        <img src="../../assets/img/site_header_profile_no.png" style="margin-left:5px; width:50px; border-radius:100px;"alt="logo">
+        <p class="loginplz" style="margin-left:0; cursor:pointer;">여기를 눌러 로그인!</p>
         <span class="btn_scroll_top">
             <a href="#">^</a>
         </span>
