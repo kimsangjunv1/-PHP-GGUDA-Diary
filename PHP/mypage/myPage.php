@@ -208,16 +208,12 @@
     </div>
 
 
-    <!-- 스크롤 -->
-    <div style="display:none" class="scroll">
-        <p>아래로 스크롤 해주세요.</p>
-        <img src="../../assets/img/site_intro_scroll.png" alt="">
-    </div>
+    
 
     <!-- 메인 -->
+    <?php include "../include/header.php" ?>
     <div class="wrap">
         <div class="site">
-            <?php include "../include/header.php" ?>
 
             <div class="board">
                 <div class="board_info">

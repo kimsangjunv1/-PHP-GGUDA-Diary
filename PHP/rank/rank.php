@@ -16,9 +16,9 @@
 
 </head>
 <body>
+    <?php include "../include/header.php" ?>
     <div class="wrap">
         <div class="site">
-            <?php include "../include/header.php" ?>
 
             <div class="board">
                 <div class="board_info">

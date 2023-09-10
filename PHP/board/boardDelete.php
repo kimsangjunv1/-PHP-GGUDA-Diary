@@ -14,13 +14,9 @@
     <link rel="stylesheet" href="../../assets/css/board.css">
 </head>
 <body>
-    <div style="display:none" class="scroll">
-        <p>아래로 스크롤 해주세요.</p>
-        <img src="../../assets/img/site_intro_scroll.png" alt="">
-    </div>
+    <?php include "../include/header.php" ?>
     <div class="wrap">
         <div class="site">
-            <?php include "../include/header.php" ?>
             <div class="remove">
                 <div class="remove_info">
                     <img class="notice_logo" src="../../assets/img/site_board_edit_delete.png" alt="">

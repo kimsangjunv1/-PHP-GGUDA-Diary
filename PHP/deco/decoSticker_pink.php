@@ -16,10 +16,7 @@
     <link rel="stylesheet" href="../../assets/css/deco.css">
 </head>
 <body>
-    <div style="display:none" class="scroll">
-        <p>아래로 스크롤 해주세요.</p>
-        <img src="../../assets/img/site_intro_scroll.png" alt="">
-    </div>
+    
     <div class="wrap">
         <div class="deco__Diary" id="deco__Diary">
             <div class="diary__inner__black">

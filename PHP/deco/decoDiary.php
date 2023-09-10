@@ -21,11 +21,7 @@
     <link rel="stylesheet" href="../../assets/css/faq.css">
 </head>
 <body>
-    <div style="display:none" class="scroll">
-        <p>아래로 스크롤 해주세요.</p>
-        <img src="../../assets/img/site_intro_scroll.png" alt="">
-    </div>
-    <!-- <img class="grid_bg" src="../../assets/img/grid_box.png" alt=""> -->
+    
     <div class="wrap">
         <div class="site">
             <div class="test">

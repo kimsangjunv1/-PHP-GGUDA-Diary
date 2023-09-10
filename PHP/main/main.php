@@ -28,11 +28,11 @@
         <p>스크롤을 내려보세요.</p>
         <img src="../../assets/img/site_intro_scroll.png" alt="">
     </div> -->
+    <?php include "../include/header.php" ?>
     <div class="wrap mainCtrl">
         <?php include "../login/login.php" ?>
 
         <div class="site">
-            <?php include "../include/header.php" ?>
             
             <div class="intro">
                 <div class="intro_page one">

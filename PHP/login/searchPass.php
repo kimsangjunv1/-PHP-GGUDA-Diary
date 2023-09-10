@@ -105,8 +105,8 @@
                 </div>
             </div>
         </div>
+        <?php include "../include/header.php" ?>
         <div class="site">
-            <?php include "../include/header.php" ?>
             <div class="intro">
                 <div class="intro_page one">
                     <div class="logo__cont">

@@ -8,7 +8,7 @@
     <a href="../tip/tip.php">정보</a>
     <a href="../faq/faq.php">FAQ</a>
 </div>
-<div class="header">
+<header class="header">
     <div class="header_inner">
         <a href="../main/main.php"><img src="../../assets/img/site_header_logo.png" alt="logo"></a>
         <img class="hamburger_menu_open" src="../../assets/img/hamburger_btn.png" alt="">
@@ -20,7 +20,7 @@
         <a href="../tip/tip.php">정보</a>
         <a href="../faq/faq.php">FAQ</a>
     </div>
-</div>
+</header>
 <div class="profile_cont" alt="로그인한 프로파일 이미지">
     <?php if( isset($_SESSION['myMemberID'])){ ?>
         <span><a href="../login/logout.php" class="profile_cont_close"><img src="../../assets/img/login_cross.png" alt="로그아웃"></a></span>

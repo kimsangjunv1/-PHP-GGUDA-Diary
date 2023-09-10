@@ -40,8 +40,8 @@
                 <button type="button" class="btn-close"><img src="../../assets/img/login_close.png" alt=""></button>
             </div>
         </div>
+        <?php include "../include/header.php" ?>
         <div class="site">
-            <?php include "../include/header.php" ?>
             <div class="intro">
                 <div class="intro_page one">
                     <div class="logo__cont">

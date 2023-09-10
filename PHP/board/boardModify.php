@@ -19,13 +19,10 @@
     <link rel="stylesheet" href="../../assets/css/board.css">
 </head>
 <body>
-    <div style="display:none" class="scroll">
-        <p>아래로 스크롤 해주세요.</p>
-        <img src="../../assets/img/site_intro_scroll.png" alt="">
-    </div>
+    <?php include "../include/header.php" ?>
+    
     <div class="wrap">
         <div class="site">
-            <?php include "../include/header.php" ?>
             <div class="board">
                 <div class="board_info">
                     <img src="../../assets/img/board_header_01.png" class="header_icon_01" alt="">
