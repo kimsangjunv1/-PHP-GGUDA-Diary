@@ -206,7 +206,6 @@
 .deco_list_inner a p{
     font-size: 30px;
     font-weight: bold;
-    font-family: 'EliceDigitalBaeum';
     margin-bottom: 10px;
 }
 .deco_list_inner a span{

@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="../../assets/css/main.css">
     <link rel="stylesheet" href="../../assets/css/deco.css">
     <link rel="stylesheet" href="../../assets/css/board.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
 
 </head>
 <body>
