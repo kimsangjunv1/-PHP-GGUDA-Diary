@@ -970,9 +970,7 @@ select#searchOptions {
   .board_list_inner {
     padding: 10px;
   }
-  .header_inner p {
-    display: none;
-  }
+
   .board_list_contents {
     width: 100%;
   }

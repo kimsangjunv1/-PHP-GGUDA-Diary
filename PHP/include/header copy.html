@@ -1,0 +1,48 @@
+<header class="header">
+  <div class="header_inner">
+    <div class="hamburger_menu">
+      <img
+        class="header_menu_close"
+        src="../../assets/img/login_cross.png"
+        alt=""
+      />
+      <a href="../board/board.php">공지사항</a>
+      <a href="../event/event.php">이벤트</a>
+      <!-- <a href="../rank/rank.php">이달의 순위</a> -->
+      <a href="../deco/deco.php">다이어리 만들기</a>
+      <a href="../deco/deco.php">꾸미기/자랑</a>
+      <a href="../tip/tip.php">정보</a>
+      <a href="../faq/faq.php">FAQ</a>
+    </div>
+    <img
+      class="hamburger_menu_open"
+      src="../../assets/img/hamburger_btn.png"
+      alt=""
+    />
+    <a href="../board/board.php">NOTICE</a>
+    <a href="../event/event.php">EVENT</a>
+    <a href="../main/main.php"
+      ><img src="/assets/img/afresh/header_logo.svg" alt="logo"
+    /></a>
+    <!-- <a href="../rank/rank.php">이달의 순위</a> -->
+    <a href="../deco/decoDiary.php">WRITE</a>
+    <a href="../deco/deco.php">FREEBOARD</a>
+    <div class="detail_menu_container">
+      <a href="../tip/tip.php">문의</a>
+      <a href="../faq/faq.php">FAQ</a>
+    </div>
+  </div>
+</header>
+<script>
+  //모바일시 햄버거 메뉴 구현
+  const menuOpen = document.querySelector(".hamburger_menu_open");
+  menuOpen.addEventListener("click", () => {
+    document.querySelector(".hamburger_menu").style.display = "flex";
+    document.querySelector("body").style.overflow = "hidden";
+  });
+  const menuClose = document.querySelector(".header_menu_close");
+  menuClose.addEventListener("click", () => {
+    document.querySelector(".hamburger_menu").style.display = "none";
+    document.querySelector("body").style.overflow = "auto";
+  });
+</script>

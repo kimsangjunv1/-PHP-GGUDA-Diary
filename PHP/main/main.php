@@ -9,26 +9,10 @@
 
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> 꾸다 - 인덱스 </title>
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="../../assets/css/main.css">
-    <link rel="stylesheet" href="../../assets/css/deco.css">
-    <link rel="stylesheet" href="../../assets/css/board.css">
-    <link rel="stylesheet" href="../../assets/css/reset.css">
-
-</head>
+<?php include "../include/head.php" ?>
 <body>
-    <!-- //header -->
-    <!-- <div class="scroll">
-        <p>스크롤을 내려보세요.</p>
-        <img src="../../assets/img/site_intro_scroll.png" alt="">
-    </div> -->
     <?php include "../include/header.php" ?>
+    <?php include "../include/loginStatus.php" ?>
     <div class="wrap mainCtrl">
         <?php include "../login/login.php" ?>
 
