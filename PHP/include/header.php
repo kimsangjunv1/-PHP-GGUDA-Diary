@@ -13,13 +13,19 @@
         <img class="hamburger_menu_open" src="../../assets/img/hamburger_btn.png" alt="">
         <a href="../board/board.php">NOTICE</a>
         <a href="../event/event.php">EVENT</a>
-        <a href="../main/main.php"><img src="/assets/img/afresh/header_logo.svg" alt="logo"></a>
+        <a href="../main/main.php"><img src="../../assets/img/afresh/header_logo.svg" alt="logo"></a>
         <!-- <a href="../rank/rank.php">이달의 순위</a> -->
         <a href="../deco/decoDiary.php">WRITE</a>
         <a href="../deco/deco.php">FREEBOARD</a>
         <div class="detail_menu_container">
             <a href="../tip/tip.php">문의</a>
             <a href="../faq/faq.php">FAQ</a>
+        </div>
+    </div>
+    <?php include "../include/loginStatus.php" ?>
+    <div class="progress_bar">
+        <div class="progress">
+        <img class='progress_btn' src='../../assets/img/afresh/asset_particle.svg' alt='별모양 그림'>
         </div>
     </div>
 </header>

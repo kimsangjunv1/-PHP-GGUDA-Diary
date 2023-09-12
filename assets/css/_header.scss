@@ -1,8 +1,11 @@
 header {
+  width: 100%;
   height: 100px;
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 10000;
+  background: linear-gradient(180deg, white 20%, transparent);
 
   .header_inner {
     height: 100%;
@@ -13,6 +16,42 @@ header {
     align-items: center;
     justify-content: center;
     gap: 20px;
+    position: relative;
+    a {
+      font-weight: 700;
+    }
+    .detail_menu_container {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(0, -50%);
+      a {
+        font-weight: 400;
+        font-size: 14px;
+      }
+    }
+  }
+  .progress_bar {
+    position: absolute;
+    bottom: -20px;
+    width: 100%;
+    height: 2px;
+    .progress {
+      position: relative;
+      background: var(--font-color);
+      height: 100%;
+      width: 0;
+      .progress_btn {
+        position: absolute;
+        top: 50%;
+        right: -20px;
+        transform: translate(0, -50%);
+        object-fit: none;
+        width: 24px;
+        height: 24px;
+        object-position: 0px 0px;
+      }
+    }
   }
 }
 

@@ -2,6 +2,16 @@
   --web: 1440px;
   --light-bg: #fff;
   --dark-bg: #181a20;
+
+  --font-color: #3e2f7c;
+}
+/* 모든 폰트 */
+* {
+  color: var(--font-color);
+  -webkit-font-smoothing: antialiased;
+  font-family: "TheJamsil", TheJamsil, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
 }
 
 /* 여백 초기화 */
@@ -51,20 +61,6 @@ section {
   display: block;
 }
 
-/* 폰트 초기화 */
-body,
-button,
-input,
-select,
-table,
-textarea {
-  color: #000;
-  -webkit-font-smoothing: antialiased;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  /* font-family: "GmarketSans", "AppleSDGothicNeo-Regular", "Malgun Gothic",
-        "맑은 고딕", dotum, 돋움; */
-}
 tr th {
   font-weight: normal;
 }
@@ -72,8 +68,6 @@ tr th {
 /* 링크 초기화 */
 a {
   text-decoration: none;
-  text-transform: uppercase;
-  color: #000;
 }
 /* 가로모드 초기화 */
 html {

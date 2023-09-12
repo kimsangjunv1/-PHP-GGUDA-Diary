@@ -401,48 +401,6 @@ fieldset {
 }
 
 /* 내 글 수정/작성 : 편집 */
-/* 편집기능 */
-.edit_function {
-  padding: 0 20px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.edit_function button {
-  background: none;
-  border: none;
-  padding: 10px;
-  margin: 0 10px;
-  transition: 0.25s;
-  border-radius: 54% 46% 53% 47% / 45% 48% 52% 55%;
-  cursor: pointer;
-  font-family: "IMHyemin";
-}
-.edit_function button:hover {
-  background: #2b0667;
-  color: #fff;
-  padding: 10px;
-  transform: scale(1.3);
-}
-.edit_function button:not(:hover) {
-  transition: 0.25s;
-}
-.edit_function button.active {
-  background-color: purple;
-  color: #fff;
-}
-
-.edit_function img {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-.edit_function img:last-child {
-  margin-right: 0;
-}
-
 .board__view div {
   position: relative;
 }

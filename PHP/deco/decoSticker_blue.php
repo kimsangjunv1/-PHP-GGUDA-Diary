@@ -156,21 +156,7 @@ body{
     position: relative;
     overflow: hidden;
 }
-.edit_function{
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 451px;
-    z-index: 100;
-    position: absolute;
-    background: #ffffff8f;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-}
-.edit_function button.active{
-    background-color: #721aff;
-}
+
 .diary_canvas{
     background: #fff;
     background-image: url(../../assets/img/grid_box.png);
