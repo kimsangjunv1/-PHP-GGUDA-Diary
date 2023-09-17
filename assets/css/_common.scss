@@ -90,26 +90,6 @@
   left: -50px;
 }
 
-// 스티커
-/* 이미지 */
-.sticker {
-  border: 1px solid rgba(255, 255, 255, 0);
-  transition: border 0.25s;
-}
-.sticker_cont {
-  background: #f9f9fc;
-  border-radius: 5px;
-  padding: 20px;
-  border: 1px solid #e1e1f3;
-  height: 100px;
-}
-
-.sticker_cont p {
-  font-size: 12px;
-  color: rgba(0, 0, 0, 0.484);
-  text-align: center;
-}
-
 // 배경 파티클
 .particle_container {
   position: fixed;
@@ -263,8 +243,10 @@
   align-items: center;
   justify-content: center;
   border-radius: 5px;
+  background: #3e2f7c;
 
   button {
+    color: white;
     background: none;
     border: none;
     padding: 10px;
@@ -275,7 +257,7 @@
     font-family: "IMHyemin";
 
     &:hover {
-      background: #433382;
+      background: #251b4b;
       color: #fff;
       padding: 10px;
       transform: scale(1.3);
@@ -295,6 +277,34 @@
       &:last-child {
         margin-right: 0;
       }
+    }
+  }
+}
+// 스티커
+/* 이미지 */
+
+.sticker {
+  width: 60px;
+  height: 60px;
+}
+
+.sticker_cont {
+  background: #ffffff70;
+  border-radius: 5px;
+  padding: 20px;
+  border: 1px solid #e1e1f3;
+  height: 100px;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  p {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.484);
+    text-align: center;
+  }
+  > div {
+    .sticker {
+      border: 1px solid rgba(255, 255, 255, 0);
+      transition: border 0.25s;
     }
   }
 }

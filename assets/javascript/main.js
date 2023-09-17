@@ -151,17 +151,14 @@ scrollUp.addEventListener("click", (e) => {
 });
 
 // 스티커 선택
+// 스티커 선택
 const stickerAll = document.querySelectorAll(".sticker");
 const size = document.querySelectorAll(".size");
 
+const stickerContainer = document.querySelector(".sticker_cont > div");
+
 stickerAll.forEach((item, where) => {
   item.onmousedown = function (event) {
-    // size.forEach((e,i)=>{
-    //     e.addEventListener("click", ()=>{
-    //         let sizeInfo = i+1;
-    //         console.log(sizeInfo)
-    //     })
-    // })
     let shiftX = event.clientX - item.getBoundingClientRect().left;
     let shiftY = event.clientY - item.getBoundingClientRect().top;
 
@@ -169,6 +166,7 @@ stickerAll.forEach((item, where) => {
     item.style.border = "1px dashed #721aff";
     item.style.borderRadius = "15px";
     item.style.zIndex = 100;
+
     document.body.append(item);
 
     moveAt(event.pageX, event.pageY);
@@ -176,6 +174,8 @@ stickerAll.forEach((item, where) => {
     // 초기 이동을 고려한 좌표 (pageX, pageY)에서
     // 공을 이동합니다.
     function moveAt(pageX, pageY) {
+      console.log("move at : ", pageX, pageY);
+
       item.style.left = pageX - shiftX + "px";
       item.style.top = pageY - shiftY + "px";
     }
@@ -190,7 +190,30 @@ stickerAll.forEach((item, where) => {
     // 공을 드롭하고, 불필요한 핸들러를 제거합니다.
     item.onmouseup = function () {
       document.removeEventListener("mousemove", onMouseMove);
-      item.style.border = "1px solid rgba(255, 255, 255, 0)";
+
+      function elementsOverlap(el1, el2) {
+        console.log("감지 실행");
+        const domRect1 = el1.getBoundingClientRect();
+        const domRect2 = el2.getBoundingClientRect();
+
+        return !(
+          domRect1.top > domRect2.bottom ||
+          domRect1.right < domRect2.left ||
+          domRect1.bottom < domRect2.top ||
+          domRect1.left > domRect2.right
+        );
+      }
+
+      let el1 = item;
+      let box = document.querySelector(".sticker_cont > div");
+      let editor = document.querySelector(".intro_input");
+
+      if (elementsOverlap(el1, box) || !elementsOverlap(el1, editor)) {
+        item.style.position = "static";
+        document.querySelector(".sticker_cont > div").append(item);
+      }
+
+      item.style.border = "5px solid rgba(255, 255, 255, 0)";
       item.onmouseup = null;
     };
   };

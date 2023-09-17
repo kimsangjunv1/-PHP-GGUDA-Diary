@@ -15,7 +15,11 @@
     <main>
         <?php include "../include/particle_container.php" ?>
         <?php include "../landing/landing_section_intro.php" ?>
+        <?php include "../landing/landing_section_guide.php" ?>
+        <?php include "../landing/landing_section_share.php" ?>
         <?php include "../landing/landing_section_deco.php" ?>
+        <?php include "../landing/landing_section_end.php" ?>
+        <?php include "../landing/landing_section_start.php" ?>
     </main>
     
     <?php include "../include/footer.php" ?>

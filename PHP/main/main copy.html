@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <body>
+    <main>
+      <section class="intro_page">
+        <div class="intro_page_inner deco">
+          <div class="section_title_container">
+            <h2 class="title">다이어리를<br />꾸며보고 싶어</h2>
+            <p class="desc">
+              본인이 원하는 모습의 다이어리 꾸미기를<br />꾸다에서 직접 해볼 수
+              있어요!
+            </p>
+            <button class="quick_button">바로가기 ></button>
+          </div>
+          <div class="section_contents_container">
+            <img src="../../assets/img/afresh/landing_book.png" alt="책 그림" />
+            <div class="editor_container">
+              <div class="edit_function" alt="편집기능 이미지">
+                <button id="btn-bold">
+                  <b>가</b>
+                </button>
+                <button id="btn-italic">
+                  <i>가</i>
+                </button>
+                <button id="btn-underline">
+                  <u>가</u>
+                </button>
+                <button id="btn-strike">
+                  <s>가</s>
+                </button>
+                <button id="btn-ordered-list">1.</button>
+                <button id="btn-unordered-list">•.</button>
+                <button id="btn-image">이미지</button>
+                <input
+                  type="file"
+                  name="uploadfile"
+                  id="img-selector"
+                  accept="image/*"
+                  style="display: none"
+                />
+              </div>
+              <div class="sticker_cont">
+                <p>원하는 스티커를 본문에 드래그 해보세요!</p>
+                <div style="display: flex">
+                  <img
+                    class="sticker"
+                    src="../../assets/img/function_edit_sticker_01.png"
+                    alt="얉게"
+                  />
+                  <img
+                    class="sticker"
+                    src="../../assets/img/function_edit_sticker_02.png"
+                    alt="얉게"
+                  />
+                  <img
+                    class="sticker"
+                    src="../../assets/img/function_edit_sticker_03.png"
+                    alt="얉게"
+                  />
+                  <img
+                    class="sticker"
+                    src="../../assets/img/function_edit_sticker_04.png"
+                    alt="얉게"
+                  />
+                  <img
+                    class="sticker"
+                    src="../../assets/img/function_edit_sticker_05.png"
+                    alt="얉게"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="intro_input"
+              id="editor"
+              contenteditable="true"
+              placeholder="여기에 입력해주세요"
+              style="
+                background: gray;
+                border: 1px solid black;
+                width: 400px;
+                height: 200px;
+              "
+            ></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+
+  <script>
+    // 스티커 선택
+    const stickerAll = document.querySelectorAll(".sticker");
+    const size = document.querySelectorAll(".size");
+
+    const stickerContainer = document.querySelector(".sticker_cont > div");
+
+    stickerAll.forEach((item, where) => {
+      item.onmousedown = function (event) {
+        let shiftX = event.clientX - item.getBoundingClientRect().left;
+        let shiftY = event.clientY - item.getBoundingClientRect().top;
+
+        // // 테스트
+        // const test = item.cloneNode(true);
+        // document.querySelector(".intro_input").append(test);
+        // // ----
+
+        item.style.position = "absolute";
+        item.style.border = "1px dashed #721aff";
+        item.style.borderRadius = "15px";
+        item.style.zIndex = 100;
+
+        document.body.append(item);
+
+        moveAt(event.pageX, event.pageY);
+
+        // 초기 이동을 고려한 좌표 (pageX, pageY)에서
+        // 공을 이동합니다.
+        function moveAt(pageX, pageY) {
+          console.log("move at : ", pageX, pageY);
+
+          item.style.left = pageX - shiftX + "px";
+          item.style.top = pageY - shiftY + "px";
+        }
+
+        function onMouseMove(event) {
+          moveAt(event.pageX, event.pageY);
+        }
+
+        // mousemove로 공을 움직입니다.
+        document.addEventListener("mousemove", onMouseMove);
+
+        // 공을 드롭하고, 불필요한 핸들러를 제거합니다.
+        item.onmouseup = function () {
+          document.removeEventListener("mousemove", onMouseMove);
+
+          function elementsOverlap(el1, el2) {
+            console.log("감지 실행");
+            const domRect1 = el1.getBoundingClientRect();
+            const domRect2 = el2.getBoundingClientRect();
+
+            return !(
+              domRect1.top > domRect2.bottom ||
+              domRect1.right < domRect2.left ||
+              domRect1.bottom < domRect2.top ||
+              domRect1.left > domRect2.right
+            );
+          }
+
+          let el1 = item;
+          let el2 = document.querySelector(".sticker_cont > div");
+
+          if (elementsOverlap(el1, el2)) {
+            item.style.position = "static";
+            document.querySelector(".sticker_cont > div").append(item);
+          }
+
+          console.log(elementsOverlap(el1, el2)); // 👉️ true
+
+          item.style.border = "5px solid rgba(255, 255, 255, 0)";
+          item.onmouseup = null;
+        };
+      };
+
+      item.ondragstart = function () {
+        return false;
+      };
+    });
+  </script>
+</html>

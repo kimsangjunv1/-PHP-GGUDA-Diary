@@ -6,6 +6,7 @@ header {
   top: 0;
   z-index: 10000;
   background: linear-gradient(180deg, white 20%, transparent);
+  transition: 0.25s;
 
   .header_inner {
     height: 100%;
