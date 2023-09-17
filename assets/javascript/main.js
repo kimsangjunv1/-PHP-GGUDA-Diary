@@ -4,9 +4,21 @@ window.onscroll = function () {
   let height =
     document.documentElement.scrollHeight -
     document.documentElement.clientHeight;
+
+  // 상단바 배경 및 색상
+  if ((winScroll / height) * 100 > 10) {
+    document.querySelector(".header").style.background = "#3E2F7C";
+    document.querySelector(".header > .header_inner > a").style.color =
+      "#ffffff";
+  } else {
+    document.querySelector(".header").style.background = "transparent";
+    document.querySelector(".header > .header_inner > a").style.color =
+      "#3e2f7c";
+  }
   // 상단바 스크롤 바
   document.querySelector(".progress").style.width =
     (winScroll / height) * 100 + "%";
+
   // 배경 스크롤
   // document.querySelector(".particle_container_inner").style.transform =
   //   "translateY(-" + ((winScroll / height) * 100) / 10 + "%)";

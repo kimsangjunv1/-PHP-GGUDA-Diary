@@ -42,6 +42,9 @@
         float: right;
       }
     }
+    &.guide {
+      max-width: none;
+    }
     &.share {
       .section_title_container {
         position: absolute;

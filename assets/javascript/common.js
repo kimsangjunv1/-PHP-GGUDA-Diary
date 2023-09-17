@@ -27,14 +27,23 @@ function hasScroll() {
     document.querySelector(".profile_cont").style.top = "80px";
     document.querySelector(".profile_cont").style.opacity = "1";
     document.querySelector(".header").style.top = "0px";
-    document.querySelector(".header").style.opacity = "1";
+    // document.querySelector(".header").style.opacity = "1";
   } else {
     document.querySelector(".profile_cont").style.top = "-100px";
     document.querySelector(".profile_cont").style.opacity = "0";
     document.querySelector(".header").style.top = "-100px";
-    document.querySelector(".header").style.opacity = "0";
+    // document.querySelector(".header").style.opacity = "0";
   }
   lastScroll = scrollTop; // 지금 현재 스크롤 값을 이전 스크롤 값에 넣은 뒤
 }
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
 
 window.addEventListener("scroll", scrollProgress);

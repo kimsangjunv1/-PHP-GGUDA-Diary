@@ -8,12 +8,20 @@
             </button>
         </div>
         <div class="section_contents_container">
-            <div class="item">
-                <img src="../../assets/img/afresh/landing_guide_image_001.png" alt="테스트 이미지">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide item"><img src="../../assets/img/afresh/landing_guide_image_001.png" alt="테스트 이미지"></div>
+                <div class="swiper-slide item"><img src="../../assets/img/afresh/landing_guide_image_001.png" alt="테스트 이미지"></div>
+                <div class="swiper-slide item"><img src="../../assets/img/afresh/landing_guide_image_001.png" alt="테스트 이미지"></div>
+                <div class="swiper-slide item"><img src="../../assets/img/afresh/landing_guide_image_001.png" alt="테스트 이미지"></div>
+                <div class="swiper-slide item"><img src="../../assets/img/afresh/landing_guide_image_001.png" alt="테스트 이미지"></div>
+                <div class="swiper-slide item"><img src="../../assets/img/afresh/landing_guide_image_001.png" alt="테스트 이미지"></div>
+                <div class="swiper-slide item"><img src="../../assets/img/afresh/landing_guide_image_001.png" alt="테스트 이미지"></div>
+                <div class="swiper-slide item"><img src="../../assets/img/afresh/landing_guide_image_001.png" alt="테스트 이미지"></div>
+                <div class="swiper-slide item"><img src="../../assets/img/afresh/landing_guide_image_001.png" alt="테스트 이미지"></div>
+                </div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </div>
-    <script>
-        
-    </script>
 </section>

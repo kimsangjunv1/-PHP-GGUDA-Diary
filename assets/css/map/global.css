@@ -438,6 +438,27 @@ body {
   transition: border 0.25s;
 }
 
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 @font-face {
   font-family: "TheJamsil";
   font-weight: 100;
@@ -522,13 +543,13 @@ header .header_inner .detail_menu_container a {
 }
 header .progress_bar {
   position: absolute;
-  bottom: -20px;
+  bottom: 0px;
   width: 100%;
   height: 2px;
 }
 header .progress_bar .progress {
   position: relative;
-  background: var(--font-color);
+  background: #8a5dc8;
   height: 100%;
   width: 0;
 }
@@ -608,6 +629,9 @@ header .progress_bar .progress .progress_btn {
 }
 .intro_page .intro_page_inner.reverse .quick_button {
   float: right;
+}
+.intro_page .intro_page_inner.guide {
+  max-width: none;
 }
 .intro_page .intro_page_inner.share .section_title_container {
   position: absolute;
