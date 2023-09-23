@@ -6,14 +6,20 @@ window.onscroll = function () {
     document.documentElement.clientHeight;
 
   // 상단바 배경 및 색상
-  if ((winScroll / height) * 100 > 10) {
+  if ((winScroll / height) * 100 > 1) {
     document.querySelector(".header").style.background = "#3E2F7C";
-    document.querySelector(".header > .header_inner > a").style.color =
-      "#ffffff";
+    document
+      .querySelectorAll(".header > .header_inner > a")
+      .forEach((el, index) => {
+        el.style.color = "#fff";
+      });
   } else {
     document.querySelector(".header").style.background = "transparent";
-    document.querySelector(".header > .header_inner > a").style.color =
-      "#3e2f7c";
+    document
+      .querySelectorAll(".header > .header_inner > a")
+      .forEach((el, index) => {
+        el.style.color = "#3e2f7c";
+      });
   }
   // 상단바 스크롤 바
   document.querySelector(".progress").style.width =
@@ -22,6 +28,10 @@ window.onscroll = function () {
   // 배경 스크롤
   // document.querySelector(".particle_container_inner").style.transform =
   //   "translateY(-" + ((winScroll / height) * 100) / 10 + "%)";
+  document.querySelector(".particle_light").style.transform =
+    "translateY(-" + ((winScroll / height) * 100) / 10 + "%)";
+  document.querySelector(".particle_normal").style.transform =
+    "translateY(-" + ((winScroll / height) * 100) / 5 + "%)";
 };
 
 // 좋아요 기능

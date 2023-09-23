@@ -44,6 +44,78 @@
     }
     &.guide {
       max-width: none;
+      .section_title_container,
+      .section_contents_container {
+        max-width: var(--web);
+        margin: 0 auto;
+      }
+      .section_title_container {
+        margin-bottom: 70px;
+      }
+    }
+    &.artist {
+      .section_title_container {
+        margin-bottom: 70px;
+      }
+      .section_contents_container {
+        display: flex;
+        gap: 20px;
+        .item_container {
+          position: relative;
+          transition: 0.25s;
+
+          &:nth-child(odd) {
+            transform: translateY(-10px);
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 5px;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(360deg, #0000004d, transparent);
+              border-radius: 5px;
+            }
+            &:hover {
+              transform: scale(1.2);
+            }
+          }
+
+          &:nth-child(even) {
+            transform: translateY(10px);
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 5px;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(360deg, #0000004d, transparent);
+              border-radius: 5px;
+            }
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+
+          p {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            z-index: 1;
+            font-size: 28px;
+            font-weight: 700;
+          }
+          img {
+            border-radius: 5px;
+            width: 200px;
+            height: 300px;
+
+            object-fit: cover;
+          }
+        }
+      }
     }
     &.share {
       .section_title_container {

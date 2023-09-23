@@ -23,7 +23,7 @@
     </div>
     <script>
         const item = document.querySelector(".item")
-        const container = document.querySelector('.section_contents_container')
+        const container = document.querySelector('.share .section_contents_container')
 
         const itemElements = item.cloneNode(true)
 

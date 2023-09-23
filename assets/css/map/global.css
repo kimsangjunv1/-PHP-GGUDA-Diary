@@ -441,6 +441,7 @@ body {
 .swiper {
   width: 100%;
   height: 100%;
+  overflow: visible !important;
 }
 
 .swiper-slide {
@@ -632,6 +633,72 @@ header .progress_bar .progress .progress_btn {
 }
 .intro_page .intro_page_inner.guide {
   max-width: none;
+}
+.intro_page .intro_page_inner.guide .section_title_container,
+.intro_page .intro_page_inner.guide .section_contents_container {
+  max-width: var(--web);
+  margin: 0 auto;
+}
+.intro_page .intro_page_inner.guide .section_title_container {
+  margin-bottom: 70px;
+}
+.intro_page .intro_page_inner.artist .section_title_container {
+  margin-bottom: 70px;
+}
+.intro_page .intro_page_inner.artist .section_contents_container {
+  display: flex;
+  gap: 20px;
+}
+.intro_page .intro_page_inner.artist .section_contents_container .item_container {
+  position: relative;
+  transition: 0.25s;
+}
+.intro_page .intro_page_inner.artist .section_contents_container .item_container:nth-child(odd) {
+  transform: translateY(-10px);
+}
+.intro_page .intro_page_inner.artist .section_contents_container .item_container:nth-child(odd)::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(360deg, rgba(0, 0, 0, 0.3019607843), transparent);
+  border-radius: 5px;
+}
+.intro_page .intro_page_inner.artist .section_contents_container .item_container:nth-child(odd):hover {
+  transform: scale(1.2);
+}
+.intro_page .intro_page_inner.artist .section_contents_container .item_container:nth-child(even) {
+  transform: translateY(10px);
+}
+.intro_page .intro_page_inner.artist .section_contents_container .item_container:nth-child(even)::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(360deg, rgba(0, 0, 0, 0.3019607843), transparent);
+  border-radius: 5px;
+}
+.intro_page .intro_page_inner.artist .section_contents_container .item_container:nth-child(even):hover {
+  transform: scale(1.1);
+}
+.intro_page .intro_page_inner.artist .section_contents_container .item_container p {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  z-index: 1;
+  font-size: 28px;
+  font-weight: 700;
+}
+.intro_page .intro_page_inner.artist .section_contents_container .item_container img {
+  border-radius: 5px;
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
 }
 .intro_page .intro_page_inner.share .section_title_container {
   position: absolute;

@@ -37,6 +37,8 @@ function hasScroll() {
   lastScroll = scrollTop; // 지금 현재 스크롤 값을 이전 스크롤 값에 넣은 뒤
 }
 
+window.addEventListener("scroll", scrollProgress);
+
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 3,
   spaceBetween: 30,
@@ -45,5 +47,3 @@ var swiper = new Swiper(".mySwiper", {
     clickable: true,
   },
 });
-
-window.addEventListener("scroll", scrollProgress);
