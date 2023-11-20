@@ -10,16 +10,10 @@
 
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>마이페이지</title>
-    <link rel="stylesheet" href="../../assets/css/board.css">
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="../../assets/css/mypage.css">
-</head>
+<?php include "../include/head.php" ?>
 <body>
+<?php include "../include/header.php" ?>
+    <main>
     <!-- 프로필 변경 -->
     <div class="login__popup profill">
         <div class="login__inner">
@@ -211,7 +205,6 @@
     
 
     <!-- 메인 -->
-    <?php include "../include/header.php" ?>
     <div class="wrap">
         <div class="site">
 
@@ -353,8 +346,9 @@
                 </div>
             </div>
         </div>
-        <?php include "../include/footer.php" ?>
     </div>
+</main>
+<?php include "../include/footer.php" ?>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script>
@@ -386,10 +380,15 @@
     //     document.querySelector(".login__popup").classList.remove("show");
     // })  
 
+    console.log("닫기 버튼 : ",loginClose)
     loginClose.forEach((el,index)=>{
+        console.log("모든 : ",el,index)
         el.addEventListener("click", ()=>{
             // console.log(index);
-            document.querySelector(".login__popup:nth-child("+ (index+1) +")").classList.remove("show");
+            console.log("클릭발생 : ",document.querySelector(".login__popup:nth-child("+ (index) +")"))
+            el.classList.remove("show");
+            document.querySelector(".login__popup:nth-child("+ (index) +")").style.display="none"
+            document.querySelector(".login__popup:nth-child("+ (index) +")").classList.remove("show");
         })
     })
     
