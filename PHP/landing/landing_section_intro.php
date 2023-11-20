@@ -1,4 +1,4 @@
-<div class="intro_page one">
+<section class="intro_page">
     <div class="logo__cont">
         <img src="../../assets/img/afresh/landing_logo.png" alt="">
         <div class="intro_text_container">
@@ -27,4 +27,4 @@
             <p class="second-parallel"></p>
         </div>
     </div>
-</div>
+</section>
