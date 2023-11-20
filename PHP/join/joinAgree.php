@@ -16,7 +16,7 @@
                     </div>      
                     <!-- <img class="login-cross"src="../../assets/img/login_cross.png" alt=""> -->
                 </div>
-                <div class="agree__cont">
+                <div class="agreement_container">
                     <form name="agree" action="join.php" method="post">
                         <fieldset>
                             <legend class="ir">회원가입을 위한 약관 확인 영역</legend>

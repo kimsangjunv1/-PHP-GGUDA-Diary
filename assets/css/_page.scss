@@ -1,4 +1,5 @@
 .page_title_container {
+	margin-bottom: 20px;
 	.page_title {
 		font-size: 32px;
 	}
@@ -11,17 +12,24 @@
 	height: 100%;
 	.join_container_inner {
 		height: 100%;
-		.agree__cont {
+		.agreement_container {
 			h2 {
 				font-size: 16px;
 			}
 			legend {
 				font-size: 22px;
 			}
+			label {
+				font-size: 16px;
+				margin-left: 10px;
+			}
 
 			label,
 			input {
 				display: block;
+			}
+			input[type="checkbox"] {
+				border-radius: 50px;
 			}
 			.agree-desc {
 				height: 50%;
@@ -35,10 +43,11 @@
 				ul {
 					li {
 						font-size: 14px;
+						font-weight: 300;
 						text-align: left;
 						margin-bottom: 10px;
 						list-style: none;
-						color: #9499b7;
+						/* color: #9499b7; */
 						&:last-child {
 							margin-bottom: 0px;
 						}
@@ -61,14 +70,6 @@
 			font-size: 16px;
 			text-align: center;
 			color: #2b0667;
-		}
-
-		.agree__cont label {
-			font-size: 16px;
-			margin-left: 10px;
-		}
-		.agree__cont input[type="checkbox"] {
-			border-radius: 50px;
 		}
 
 		.scrollBar::-webkit-scrollbar {
