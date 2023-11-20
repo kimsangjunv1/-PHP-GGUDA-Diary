@@ -80,8 +80,9 @@
                                         <input type="checkbox" name="agreeCheck1" id="agreeCheck2" class="agreeCheck">
                                         <label for="agreeCheck2">이용약관에 동의합니다.</label>
                                     </div>
-                                    <!-- <button type="submit" class="input__Btn agree">동의</button> -->
-                                    <button class="input__Btn agree">동의</button>
+                                    <button type="submit" class="agree_btn">동의</button>
+                                    <!-- <button class="input__Btn agree">동의</button> -->
+                                    <!-- <div class="test">동의</div> -->
                             </section>
                         </fieldset>
                     </form>
@@ -96,7 +97,7 @@
 <script>
     //체크 표시 검사
     const isCheck= document.querySelectorAll(".agreeCheck")
-    const agree = document.querySelector(".input__Btn")
+    const agree = document.querySelector(".agree_btn")
     const text = document.querySelector(".login-txt p")
 
     //동의 버튼에 클릭 발생시
@@ -107,6 +108,7 @@
             //각각 체크 검사시 안되어있다면
         console.log("체크상태",e.checked)
             if(e.checked == false){
+        console.log("작동")
                 // 체크박스를 다시 확인해달라는 메세지를 표시 및 서식 적용.
                 text.innerText = "체크박스를 다시 확인해주세요!"
                 text.classList.add("fail")
