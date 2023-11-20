@@ -12,91 +12,12 @@
 
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>공지사항</title>
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="../../assets/css/board.css">
-    <link rel="stylesheet" href="../../assets/css/deco.css">
-</head>
+<?php include "../include/head.php" ?>
 <body>
-    
+    <?php include "../include/header.php" ?>
+    <main>
     <div class="wrap">
         <div class="site">
-            <div class="test">
-                <div class="hamburger_menu">
-                    <img class="header_menu_close" src="../../assets/img/login_cross.png" alt="">
-                    <a href="../board/board.php">공지사항</a>
-                    <a href="../event/event.php">이벤트</a>
-                    <!-- <a href="../rank/rank.php">이달의 순위</a> -->
-                    <a href="../deco/deco.php">다이어리 만들기</a>
-                    <a href="../deco/deco.php">꾸미기/자랑</a>
-                    <a href="../tip/tip.php">정보</a>
-                    <a href="../faq/faq.php">FAQ</a>
-                </div>
-                <div class="header">
-                    <div class="header_inner">
-                        <a href="../main/main.php"><img src="../../assets/img/site_header_logo.png" alt="logo"></a>
-                        <img class="hamburger_menu_open" src="../../assets/img/hamburger_btn.png" alt="">
-                        <a href="../board/board.php">공지사항</a>
-                        <a href="../event/event.php">이벤트</a>
-                        <!-- <a href="../rank/rank.php">이달의 순위</a> -->
-                        <a href="../deco/decoDiary.php">다이어리 만들기</a>
-                        <a href="../deco/deco.php">꾸미기/자랑</a>
-                        <a href="../tip/tip.php">정보</a>
-                        <a href="../faq/faq.php">FAQ</a>
-                    </div>
-                </div>
-                <div class="profile_cont" alt="로그인한 프로파일 이미지">
-                    <?php if( isset($_SESSION['myMemberID'])){ ?>
-                        <span><a href="../login/logout.php" class="profile_cont_close"><img src="../../assets/img/login_cross.png" alt="로그아웃"></a></span>
-                        <!-- <img src="../../assets/img/site_header_profile.png" alt="logo"> -->
-                        <?php echo "<img src='../../assets/img/blog/".$_SESSION['youImageFile']."' alt='프로필 이미지' class='profile_image'>"; ?>
-                        <?php
-                            echo "<p>";
-                            echo "<a href='../mypage/myPage.php' class='mypage__btn'></a>안녕하세요 <em>".$_SESSION['youName']."님!</em>";
-                            echo "</p>";
-                            ?>
-                            <span class="btn_scroll_top">
-                                <a href="#">^</a>
-                            </span>
-                    <?php } else { ?>
-                        <a style="display:none" href="../login/logout.php" class="profile_cont_close"><img src="../../assets/img/login_cross.png" alt="로그아웃"></a>
-                        <img src="../../assets/img/site_header_profile_no.png" class="loginplz" alt="logo">
-                        <p style="margin-left:0">여기를 눌러 로그인!</p>
-                        <span class="btn_scroll_top">
-                            <a href="#">^</a>
-                        </span>
-                        <script>
-                            document.querySelector(".btn-close").addEventListener("click", ()=>{
-                                document.querySelector(".login__popup").classList.remove("show");
-                            })
-                
-                            document.querySelector(".loginplz").addEventListener("click", ()=>{
-                                document.querySelector(".login__popup").classList.add("show");
-                            })
-                        </script>
-                    <?php } ?> 
-                </div>
-                <script>
-                    //모바일시 햄버거 메뉴 구현
-                    const menuOpen = document.querySelector(".hamburger_menu_open");
-                    menuOpen.addEventListener("click", ()=>{
-                        document.querySelector(".hamburger_menu").style.display="flex"
-                        document.querySelector("body").style.overflow="hidden"
-                    })
-                    const menuClose = document.querySelector(".header_menu_close");
-                    menuClose.addEventListener("click", ()=>{
-                        document.querySelector(".hamburger_menu").style.display="none"
-                        document.querySelector("body").style.overflow="auto"
-                    })
-                </script>
-            </div>
-            <!-- 헤더 -->
-
-
             <div class="board">
                 <div class="board_info">
 <?php
@@ -195,21 +116,10 @@
         </div>
         
 
-
-        <!-- 푸터 -->
-        <div class="test">
-            <footer class="footer">
-                <div class="footer_inner">
-                    <div>
-                        <img src="../../assets/img/footer__logo.png" alt="푸터 로고">
-                        <p>CODING CODI ALL Rrights Reserved</p>
-                        <p>Contact : to_before@naver.com</p>
-                    </div>
-                    <!-- <button>사이트맵</button> -->
-                </div>
-            </footer>
-        </div>
     </div>
+
+    </main>
+    <?php include "../include/footer.php" ?>
 </body>
 <script src="../../assets/javascript/board.js"></script>
 <!-- <script src="../../assets/javascript/search.js"></script> -->
