@@ -6,6 +6,11 @@
 	height: 100vh;
 }
 
+// 로그인 팝업창
+.login__popup {
+	display: none;
+}
+
 // 상단 프로파일
 .profile_cont {
 	position: fixed;
