@@ -74,6 +74,8 @@ const automoving = () => {
 //     }
 //   }
 
+// 넓이 값이 맨 오른쪽에 닿는다면 다시 처음으로 스타일 이동
+
   function initTexts(element, textArray) {
     textArray.push(...textArray);
     for (let i = 0; i < textArray.length; i++) {

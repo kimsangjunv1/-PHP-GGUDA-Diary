@@ -19,6 +19,7 @@
             <a href="#">^</a>
         </span>
         <script>
+            console.log("확인 : ",document.querySelector(".btn-close"))
             document.querySelector(".btn-close").addEventListener("click", ()=>{
                 document.querySelector(".login__popup").classList.remove("show");
             })

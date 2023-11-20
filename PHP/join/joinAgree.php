@@ -1,27 +1,20 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> 이용 약관 동의 </title>
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="../../assets/css/board.css">
-    <!-- <link rel="stylesheet" href="../../assets/javascript/main.js"> -->
-
-</head>
-<body style="overflow:hidden;">
-    <div class="wrap">
-        <div class="login__popup joinAgree">
-            <div class="login__inner">
-                <div class="login__header">
-                    <img src="../../assets/img/signin_agree_logo.png" alt="">
-                    <h3>AGREEMENT</h3>
-                    <div class="login-txt">
+<?php include "../include/head.php" ?>
+<body>
+    <?php include "../include/header.php" ?>
+    <main id="main">
+        <!-- 회원가입 : 약관동의 -->
+        <section class="join_container">
+            <div class="join_container_inner">
+                <div class="page_title_container">
+                    <!-- <img src="../../assets/img/signin_agree_logo.png" alt=""> -->
+                    <h3 class="page_title">AGREEMENT</h3>
+                    <div class="page_desc">
                         <p>하단에 적힌 약관을 확인해주시길 바랍니다!</p>
                         <!-- <p class="fail">약관을 동의해주세요!</p> -->
                     </div>      
-                    <img class="login-cross"src="../../assets/img/login_cross.png" alt="">
+                    <!-- <img class="login-cross"src="../../assets/img/login_cross.png" alt=""> -->
                 </div>
                 <div class="agree__cont">
                     <form name="agree" action="join.php" method="post">
@@ -87,35 +80,18 @@
                                         <input type="checkbox" name="agreeCheck1" id="agreeCheck2" class="agreeCheck">
                                         <label for="agreeCheck2">이용약관에 동의합니다.</label>
                                     </div>
-                                    <button type="submit" class="input__Btn agree">동의</button>
+                                    <!-- <button type="submit" class="input__Btn agree">동의</button> -->
+                                    <button class="input__Btn agree">동의</button>
                             </section>
                         </fieldset>
                     </form>
                 </div>
                 <button type="button" class="btn-close"><img src="../../assets/img/login_close.png" alt=""></button>
             </div>
-        </div>
-        <?php include "../include/header.php" ?>
-        <div class="site">
-            <div class="intro">
-                <div class="intro_page one">
-                    <div class="logo__cont">
-                        <img src="../assets/img/site_intro_logo.png" alt="">
-                        <p>“너가 상상한 <em>그 모든것</em> 여기서 꿈을 <em>꾸다</em>.”</p>
-                    </div>
-                    <img src="../assets/img/site_intro_stroke.svg" alt="">
-                    <div style="position:absolute; bottom: 25px;">
-                        <div class="cover">
-                            <p class="first-parallel"></p>
-                        </div>
-                        <div class="cover">
-                            <p class="second-parallel"></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        </section>
+    </main>
+    
+    <?php include "../include/footer.php" ?>
 </body>
 <script>
     //체크 표시 검사
@@ -125,9 +101,11 @@
 
     //동의 버튼에 클릭 발생시
     agree.addEventListener("click", (nextPage)=>{
+        console.log("클릭")
         //#agreeCheck1 각 요소에
         isCheck.forEach((e,i)=>{
             //각각 체크 검사시 안되어있다면
+        console.log("체크상태",e.checked)
             if(e.checked == false){
                 // 체크박스를 다시 확인해달라는 메세지를 표시 및 서식 적용.
                 text.innerText = "체크박스를 다시 확인해주세요!"
@@ -140,7 +118,7 @@
         })
     })
 </script>
-<script>
+<!-- <script>
     //파티클 생성 10개
     //설명 : 파티클(작은거/큰거) 하나하나 태그로 넣기에는 너무 길어져서 사용함
     
@@ -226,5 +204,5 @@
     document.querySelector(".btn-close").addEventListener("click", ()=>{
         history.back();
     })
-</script>
+</script> -->
 </html>

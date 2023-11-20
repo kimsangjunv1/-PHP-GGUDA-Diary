@@ -1,333 +1,341 @@
+#main {
+	margin: 0 auto;
+	padding: 150px 20px 0 20px;
+	max-width: 1300px;
+	width: 100%;
+	height: 100vh;
+}
+
 // 상단 프로파일
 .profile_cont {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  top: 73px;
-  left: 50%;
-  background: #fff;
-  border-radius: 100px;
-  /* padding: 11px; */
-  border: 1px solid #ededed;
-  z-index: 1000;
-  transform: translate(-50%, 0);
-  box-shadow: 0px 20px 20px -20px #41357240;
-  transition: opacity 0.25s, top 0.25s 0.2s;
-  -webkit-animation: updown3 1.3s alternate 0s infinite;
-  animation: updown3 1.3s alternate 0s infinite;
-  animation-timing-function: ease-in-out;
-  /* overflow: hidden; */
+	position: fixed;
+	display: flex;
+	align-items: center;
+	top: 73px;
+	left: 50%;
+	background: #fff;
+	border-radius: 100px;
+	/* padding: 11px; */
+	border: 1px solid #ededed;
+	z-index: 1000;
+	transform: translate(-50%, 0);
+	box-shadow: 0px 20px 20px -20px #41357240;
+	transition: opacity 0.25s, top 0.25s 0.2s;
+	-webkit-animation: updown3 1.3s alternate 0s infinite;
+	animation: updown3 1.3s alternate 0s infinite;
+	animation-timing-function: ease-in-out;
+	/* overflow: hidden; */
 
-  p {
-    font-size: 14px;
-    z-index: 1;
-    background: linear-gradient(270deg, white 76%, transparent 100%);
-    height: 60px;
-    box-sizing: border-box;
-    padding: 12px 0;
-    color: #0000006e;
-    text-align: right;
-    display: block;
-    width: 150px;
-    margin-left: 48px;
-    position: relative;
-    em {
-      display: block;
-      font-size: 18px;
-      font-weight: bold;
-      color: #433382;
-    }
-  }
+	p {
+		font-size: 14px;
+		z-index: 1;
+		background: linear-gradient(270deg, white 76%, transparent 100%);
+		height: 60px;
+		box-sizing: border-box;
+		padding: 12px 0;
+		color: #0000006e;
+		text-align: right;
+		display: block;
+		width: 150px;
+		margin-left: 48px;
+		position: relative;
+		em {
+			display: block;
+			font-size: 18px;
+			font-weight: bold;
+			color: #433382;
+		}
+	}
 
-  span {
-    z-index: 1;
-    &:nth-child(1) {
-      position: absolute;
-      left: -48px;
-    }
-  }
+	span {
+		z-index: 1;
+		&:nth-child(1) {
+			position: absolute;
+			left: -48px;
+		}
+	}
 }
 
 .profile_image {
-  height: 60px;
-  width: 97px;
-  object-fit: cover;
-  border-radius: 100px 0px 0px 100px;
-  /* border: 1px solid #ecebf1; */
-  margin-right: 10px;
-  position: absolute;
-  top: 0;
+	height: 60px;
+	width: 97px;
+	object-fit: cover;
+	border-radius: 100px 0px 0px 100px;
+	/* border: 1px solid #ecebf1; */
+	margin-right: 10px;
+	position: absolute;
+	top: 0;
 }
 
 .profile_cont_close {
-  background: #e5e6f06b;
-  border-radius: 100px;
-  margin: 10px;
-  padding: 7px;
-  display: flex;
-  align-items: center;
-  backdrop-filter: blur(3px);
-  filter: saturate(0.5);
-  img {
-    height: 14px;
-    opacity: 0.3;
-  }
-  &:hover {
-    background: #ffffff;
-    box-shadow: 0px 0px 20px 5px #ffffff63;
-    transition: 0.25s;
-  }
-  &:not(:hover) {
-    transition: 0.25s;
-  }
+	background: #e5e6f06b;
+	border-radius: 100px;
+	margin: 10px;
+	padding: 7px;
+	display: flex;
+	align-items: center;
+	backdrop-filter: blur(3px);
+	filter: saturate(0.5);
+	img {
+		height: 14px;
+		opacity: 0.3;
+	}
+	&:hover {
+		background: #ffffff;
+		box-shadow: 0px 0px 20px 5px #ffffff63;
+		transition: 0.25s;
+	}
+	&:not(:hover) {
+		transition: 0.25s;
+	}
 }
 
 .mypage__btn {
-  position: absolute;
-  width: 135%;
-  height: 100%;
-  top: 0;
-  left: -50px;
+	position: absolute;
+	width: 135%;
+	height: 100%;
+	top: 0;
+	left: -50px;
 }
 
 // 배경 파티클
 .particle_container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  .particle_container_inner {
-    position: relative;
-    height: 100%;
-    max-width: var(--web);
-    margin: 0 auto;
-    .particle_normal,
-    .particle_light {
-      width: 24px;
-      height: 24px;
-      object-fit: none;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	.particle_container_inner {
+		position: relative;
+		height: 100%;
+		max-width: var(--web);
+		margin: 0 auto;
+		.particle_normal,
+		.particle_light {
+			width: 24px;
+			height: 24px;
+			object-fit: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
 
-    .particle_normal {
-      // animation: hover2 1.2s 0.8s infinite alternate;
-      &:nth-child(1) {
-        object-position: -20px 0px;
-        top: 50px;
-        left: 20px;
-      }
-      &:nth-child(2) {
-        object-position: -50px 0px;
-      }
-      &:nth-child(3) {
-        object-position: 0px 0px;
-        top: 10%;
-        left: 20%;
-      }
-      &:nth-child(4) {
-        object-position: -20px 0px;
-        top: 40%;
-        left: 40%;
-      }
-      &:nth-child(5) {
-        object-position: -50px 0px;
-        top: 57%;
-        left: 46%;
-      }
-      &:nth-child(6) {
-        object-position: 0px 0px;
-      }
-      &:nth-child(7) {
-        object-position: -20px 0px;
-        top: 40%;
-        right: 40%;
-        left: auto;
-      }
-      &:nth-child(8) {
-        object-position: -50px 0px;
-      }
-      &:nth-child(9) {
-        object-position: 0px 0px;
-        top: 80%;
-        right: 0%;
-        left: auto;
-      }
-      &:nth-child(10) {
-        object-position: -20px 0px;
-      }
-      &:nth-child(11) {
-        object-position: -50px 0px;
-      }
-      &:nth-child(12) {
-        object-position: 0px 0px;
-      }
-    }
-    .particle_light {
-      // animation: hover2 1.2s 0.8s infinite alternate;
-      &:nth-child(1) {
-        object-position: -20px 0px;
-      }
-      &:nth-child(2) {
-        object-position: -50px 0px;
-        top: 0%;
-        left: 14%;
-      }
-      &:nth-child(3) {
-        object-position: 0px 0px;
-      }
-      &:nth-child(4) {
-        object-position: -20px 0px;
-        top: 40%;
-        left: 40%;
-      }
-      &:nth-child(5) {
-        object-position: -50px 0px;
-      }
-      &:nth-child(6) {
-        object-position: 0px 0px;
-        /* object-position: -20px 0px; */
-        top: 27%;
-        right: 16%;
-        left: auto;
-      }
-      &:nth-child(7) {
-        object-position: -20px 0px;
-      }
-      &:nth-child(8) {
-        object-position: -50px 0px;
-        top: 70%;
-        right: 40%;
-        left: auto;
-      }
-      &:nth-child(9) {
-        object-position: 0px 0px;
-      }
-      &:nth-child(10) {
-        object-position: -20px 0px;
-        top: 63%;
-        right: 90%;
-        left: auto;
-      }
-      &:nth-child(11) {
-        object-position: -50px 0px;
-      }
-      &:nth-child(12) {
-        object-position: 0px 0px;
-      }
-    }
+		.particle_normal {
+			// animation: hover2 1.2s 0.8s infinite alternate;
+			&:nth-child(1) {
+				object-position: -20px 0px;
+				top: 50px;
+				left: 20px;
+			}
+			&:nth-child(2) {
+				object-position: -50px 0px;
+			}
+			&:nth-child(3) {
+				object-position: 0px 0px;
+				top: 10%;
+				left: 20%;
+			}
+			&:nth-child(4) {
+				object-position: -20px 0px;
+				top: 40%;
+				left: 40%;
+			}
+			&:nth-child(5) {
+				object-position: -50px 0px;
+				top: 57%;
+				left: 46%;
+			}
+			&:nth-child(6) {
+				object-position: 0px 0px;
+			}
+			&:nth-child(7) {
+				object-position: -20px 0px;
+				top: 40%;
+				right: 40%;
+				left: auto;
+			}
+			&:nth-child(8) {
+				object-position: -50px 0px;
+			}
+			&:nth-child(9) {
+				object-position: 0px 0px;
+				top: 80%;
+				right: 0%;
+				left: auto;
+			}
+			&:nth-child(10) {
+				object-position: -20px 0px;
+			}
+			&:nth-child(11) {
+				object-position: -50px 0px;
+			}
+			&:nth-child(12) {
+				object-position: 0px 0px;
+			}
+		}
+		.particle_light {
+			// animation: hover2 1.2s 0.8s infinite alternate;
+			&:nth-child(1) {
+				object-position: -20px 0px;
+			}
+			&:nth-child(2) {
+				object-position: -50px 0px;
+				top: 0%;
+				left: 14%;
+			}
+			&:nth-child(3) {
+				object-position: 0px 0px;
+			}
+			&:nth-child(4) {
+				object-position: -20px 0px;
+				top: 40%;
+				left: 40%;
+			}
+			&:nth-child(5) {
+				object-position: -50px 0px;
+			}
+			&:nth-child(6) {
+				object-position: 0px 0px;
+				/* object-position: -20px 0px; */
+				top: 27%;
+				right: 16%;
+				left: auto;
+			}
+			&:nth-child(7) {
+				object-position: -20px 0px;
+			}
+			&:nth-child(8) {
+				object-position: -50px 0px;
+				top: 70%;
+				right: 40%;
+				left: auto;
+			}
+			&:nth-child(9) {
+				object-position: 0px 0px;
+			}
+			&:nth-child(10) {
+				object-position: -20px 0px;
+				top: 63%;
+				right: 90%;
+				left: auto;
+			}
+			&:nth-child(11) {
+				object-position: -50px 0px;
+			}
+			&:nth-child(12) {
+				object-position: 0px 0px;
+			}
+		}
 
-    .blur_purple,
-    .blur_yellow {
-      position: absolute;
-    }
+		.blur_purple,
+		.blur_yellow {
+			position: absolute;
+		}
 
-    .blur_purple {
-      top: 0%;
-      right: -20%;
-    }
-    .blur_yellow {
-      bottom: -40%;
-      left: -10%;
-    }
-  }
+		.blur_purple {
+			top: 0%;
+			right: -20%;
+		}
+		.blur_yellow {
+			bottom: -40%;
+			left: -10%;
+		}
+	}
 }
 
 // 편집기
 .edit_function {
-  padding: 0 20px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  background: #3e2f7c;
+	padding: 0 20px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 5px;
+	background: #3e2f7c;
 
-  button {
-    color: white;
-    background: none;
-    border: none;
-    padding: 10px;
-    margin: 0 10px;
-    transition: 0.25s;
-    border-radius: 54% 46% 53% 47% / 45% 48% 52% 55%;
-    cursor: pointer;
-    font-family: "IMHyemin";
+	button {
+		color: white;
+		background: none;
+		border: none;
+		padding: 10px;
+		margin: 0 10px;
+		transition: 0.25s;
+		border-radius: 54% 46% 53% 47% / 45% 48% 52% 55%;
+		cursor: pointer;
+		font-family: "IMHyemin";
 
-    &:hover {
-      background: #251b4b;
-      color: #fff;
-      padding: 10px;
-      transform: scale(1.3);
-    }
+		&:hover {
+			background: #251b4b;
+			color: #fff;
+			padding: 10px;
+			transform: scale(1.3);
+		}
 
-    &:not(:hover) {
-      transition: 0.25s;
-    }
+		&:not(:hover) {
+			transition: 0.25s;
+		}
 
-    &.active {
-      background-color: #433382;
-      color: #fff;
-    }
-    img {
-      display: inline-block;
-      margin-right: 20px;
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
+		&.active {
+			background-color: #433382;
+			color: #fff;
+		}
+		img {
+			display: inline-block;
+			margin-right: 20px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
 }
 // 스티커
 /* 이미지 */
 
 .sticker {
-  width: 60px;
-  height: 60px;
+	width: 60px;
+	height: 60px;
 }
 
 .sticker_cont {
-  background: #ffffff70;
-  border-radius: 5px;
-  padding: 20px;
-  border: 1px solid #e1e1f3;
-  height: 100px;
-  backdrop-filter: blur(50px);
-  -webkit-backdrop-filter: blur(50px);
-  p {
-    font-size: 12px;
-    color: rgba(0, 0, 0, 0.484);
-    text-align: center;
-  }
-  > div {
-    .sticker {
-      border: 1px solid rgba(255, 255, 255, 0);
-      transition: border 0.25s;
-    }
-  }
+	background: #ffffff70;
+	border-radius: 5px;
+	padding: 20px;
+	border: 1px solid #e1e1f3;
+	height: 100px;
+	backdrop-filter: blur(50px);
+	-webkit-backdrop-filter: blur(50px);
+	p {
+		font-size: 12px;
+		color: rgba(0, 0, 0, 0.484);
+		text-align: center;
+	}
+	> div {
+		.sticker {
+			border: 1px solid rgba(255, 255, 255, 0);
+			transition: border 0.25s;
+		}
+	}
 }
 
 // 스와이퍼
 .swiper {
-  width: 100%;
-  height: 100%;
-  overflow: visible !important;
+	width: 100%;
+	height: 100%;
+	overflow: visible !important;
 }
 
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }

@@ -1,0 +1,88 @@
+.page_title_container {
+	.page_title {
+		font-size: 32px;
+	}
+	.page_desc {
+		font-size: 16px;
+	}
+}
+
+.join_container {
+	height: 100%;
+	.join_container_inner {
+		height: 100%;
+		.agree__cont {
+			h2 {
+				font-size: 16px;
+			}
+			legend {
+				font-size: 22px;
+			}
+
+			label,
+			input {
+				display: block;
+			}
+			.agree-desc {
+				height: 50%;
+				overflow-x: hidden;
+				overflow-y: auto;
+				margin-bottom: 20px;
+				border-radius: 5px;
+				border: 1px solid #0000001c;
+				padding: 15px;
+
+				ul {
+					li {
+						font-size: 14px;
+						text-align: left;
+						margin-bottom: 10px;
+						list-style: none;
+						color: #9499b7;
+						&:last-child {
+							margin-bottom: 0px;
+						}
+					}
+				}
+			}
+			form {
+				fieldset {
+					.joinAgree {
+						.check {
+							display: flex;
+							justify-content: center;
+							margin-bottom: 20px;
+						}
+					}
+				}
+			}
+		}
+		.agree-desc ul ul:nth-child(1) li {
+			font-size: 16px;
+			text-align: center;
+			color: #2b0667;
+		}
+
+		.agree__cont label {
+			font-size: 16px;
+			margin-left: 10px;
+		}
+		.agree__cont input[type="checkbox"] {
+			border-radius: 50px;
+		}
+
+		.scrollBar::-webkit-scrollbar {
+			width: 8px; /* 스크롤바의 너비 */
+		}
+
+		.scrollBar::-webkit-scrollbar-thumb {
+			height: 30%; /* 스크롤바의 길이 */
+			background: #4b12a7; /* 스크롤바의 색상 */
+			border-radius: 10px;
+		}
+
+		.scrollBar::-webkit-scrollbar-track {
+			background: #0000001c; /*스크롤바 뒷 배경 색상*/
+		}
+	}
+}

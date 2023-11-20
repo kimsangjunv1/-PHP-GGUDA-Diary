@@ -22,6 +22,7 @@
             <a href="../faq/faq.php">FAQ</a>
         </div>
     </div>
+    <?php include "../include/loginPopup.php" ?>
     <?php include "../include/loginStatus.php" ?>
     <div class="progress_bar">
         <div class="progress">
@@ -29,6 +30,7 @@
         </div>
     </div>
 </header>
+
 <script>
     //모바일시 햄버거 메뉴 구현
     const menuOpen = document.querySelector(".hamburger_menu_open");

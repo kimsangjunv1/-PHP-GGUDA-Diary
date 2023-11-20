@@ -1,17 +1,17 @@
 :root {
-  --web: 1440px;
-  --light-bg: #fff;
-  --dark-bg: #181a20;
+	--web: 1440px;
+	--light-bg: #fff;
+	--dark-bg: #181a20;
 
-  --font-color: #3e2f7c;
+	--font-color: #3e2f7c;
 }
 /* 모든 폰트 */
 * {
-  // color: var(--font-color);
-  -webkit-font-smoothing: antialiased;
-  font-family: "TheJamsil", TheJamsil, -apple-system, BlinkMacSystemFont,
-    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-    Helvetica Neue, sans-serif;
+	// color: var(--font-color);
+	-webkit-font-smoothing: antialiased;
+	font-family: "TheJamsil", TheJamsil, -apple-system, BlinkMacSystemFont,
+		Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+		Helvetica Neue, sans-serif;
 }
 
 /* 여백 초기화 */
@@ -42,8 +42,8 @@ input,
 button,
 figure,
 figcaption {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 /* 시멘틱 태그 초기화 */
@@ -58,27 +58,27 @@ hgroup,
 menu,
 nav,
 section {
-  display: block;
+	display: block;
 }
 
 tr th {
-  font-weight: normal;
+	font-weight: normal;
 }
 
 /* 링크 초기화 */
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 /* 가로모드 초기화 */
 html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
 }
 /* 목록 초기화 */
 li,
 ol,
 ul {
-  list-style: none;
+	list-style: none;
 }
 
 /* 제목 초기화 */
@@ -88,60 +88,61 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: bold;
+	font-weight: bold;
 }
 /* 폰트 스타일 초기화 */
 em,
 address {
-  font-style: normal;
+	font-style: normal;
 }
 
 /* 보더 초기화 */
 img,
 fieldset,
 button {
-  border: 0;
+	border: 0;
 }
 
 /* 클리어픽스 */
 .clearfix {
-  zoom: 1;
+	zoom: 1;
 }
 .clearfix::before,
 .clearfix::after {
-  content: "";
-  display: block;
-  line-height: 0;
+	content: "";
+	display: block;
+	line-height: 0;
 }
 .clearfix::after {
-  clear: both;
+	clear: both;
 }
 
 /* 블라인드 효과 */
 .blind {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
 }
 
 /* 이미지 대체(ir) */
 .ir {
-  display: block;
-  overflow: hidden;
-  font-size: 0;
-  line-height: 0;
-  text-indent: -9999px;
+	display: block;
+	overflow: hidden;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -9999px;
 }
 
 body {
-  overflow: overlay;
-  margin: 0 auto;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: normal;
-  font-size: 18px;
-  background-size: cover;
+	overflow: overlay;
+	overflow-x: hidden;
+	margin: 0 auto;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	font-weight: normal;
+	font-size: 18px;
+	background-size: cover;
 }
