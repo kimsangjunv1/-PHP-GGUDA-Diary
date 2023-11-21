@@ -6,19 +6,19 @@
     $result = $connect -> query($sql);
     $info = $result -> fetch_array(MYSQLI_ASSOC);
 ?>
-<div class="deco_book">
-    <div class="deco_book_inner">
-        <div class="book_item">
-            <div class="book_item_img_cont">
+<div class="diary_container">
+    <div class="diary_container_inner">
+        <div class="item">
+            <div class="cover_image_container">
                 <!-- <img src="/assets/img/test_bg.jpg" alt=""> -->
 <?php
 // $info = $result -> fetch_array(MYSQLI_ASSOC);
 echo "<img src='../../assets/img/testImg/".$info['testImageFile']."' alt='표지 이미지'>";
 ?>
             </div>
-            <div class="book_desc">
+            <div class="description_container">
                 <?php
-                    echo "<p>".$info['color']."</p>";
+                    echo "<p>".$info['regTime']."</p>";
                     echo "<p>".$info['youName']."</p>";
                 ?>
             </div>

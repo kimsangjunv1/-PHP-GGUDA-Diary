@@ -11,6 +11,150 @@
 	display: none;
 }
 
+// 첵
+/* book */
+.diary_container {
+	position: relative;
+	.diary_container_inner {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		animation: updown1 0.9s alternate 0s infinite;
+		.item {
+			position: relative;
+			height: 300px;
+			width: 200px;
+			transform: rotate(11deg);
+			margin-bottom: 70px;
+
+			&::after {
+				content: "|  |  |  |  |  |  |  |  |  |  |";
+				/* width: 150px; */
+				font-size: 30px;
+				transform: rotate(90deg) translate(0, -50%);
+				position: absolute;
+				left: -135px;
+				top: 40%;
+				color: #373333;
+				font-family: "imhyemin";
+				font-weight: bold;
+				/* height: 78px; */
+			}
+			&::before {
+				content: "";
+				height: 300px;
+				border: 1px solid #5d607c59;
+				width: 200px;
+				background: #ffffff;
+				/* margin: 70px 0; */
+				border-radius: 15px;
+				transform: translateX(6px);
+				box-shadow: 2px 8px 0px 0px #504ea0b0;
+				position: absolute;
+				top: 5px;
+				left: 0;
+				z-index: -122222;
+			}
+			&:hover {
+				transform: scale(1.1) translateY(-20px);
+				transition: 0.25s;
+			}
+			&:not(:hover) {
+				transition: 0.25s;
+			}
+			.cover_image_container {
+				position: relative;
+				&::before,
+				&::after {
+					content: "";
+				}
+				&::before {
+					position: absolute;
+					bottom: -186px;
+					left: 27px;
+					width: 73%;
+					height: 112px;
+					background: linear-gradient(0deg, #ffffff 10%, transparent 90%);
+					z-index: 1212;
+					border-radius: 0px 0px 15px 15px;
+				}
+				&::after {
+					position: absolute;
+					width: 11px;
+					height: 20px;
+					z-index: 1212;
+					background: #a891ea;
+					right: -19px;
+					top: 40px;
+					border-right: 3px solid #4200ff;
+					border-left: 1px solid #0000003d;
+					box-shadow: 2px 4px 4px 0px #0000002e;
+				}
+				img {
+					position: absolute;
+					z-index: 1;
+					left: 50%;
+					top: 40px;
+					transform: translate(-50%, 0);
+					border: 1px dashed #ffffff61;
+					border-radius: 15px;
+					width: 145px;
+					height: 145px;
+					object-fit: cover;
+					background: #fff;
+				}
+			}
+			.description_container {
+				position: absolute;
+				z-index: 1;
+				bottom: 20px;
+				left: 50%;
+				text-align: left;
+				transform: translate(-50%, 0);
+				border-left: 3px solid #fff;
+				padding-left: 10px;
+				color: #fff;
+				font-family: "imhyemin";
+				font-weight: bold;
+				font-size: 16px;
+			}
+			.book_front {
+				position: relative;
+				height: 300px;
+				width: 200px;
+				background: linear-gradient(129deg, #e0f3b0, #01b0bb);
+				filter: hue-rotate(70deg);
+				border-radius: 15px;
+				box-shadow: inset 2px 2px 20px 0px #fff;
+
+				&.blue_front {
+					filter: hue-rotate(44deg) !important;
+				}
+
+				&.pink_front {
+					filter: hue-rotate(161deg) !important;
+				}
+
+				&.purple_front {
+					filter: hue-rotate(96deg) !important;
+				}
+			}
+		}
+	}
+
+	&::before {
+		content: "";
+		width: 148px;
+		height: 60px;
+		filter: blur(21px);
+		background: #3b357270;
+		position: absolute;
+		bottom: 27px;
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+}
+
 // 상단 프로파일
 .profile_cont {
 	position: fixed;
