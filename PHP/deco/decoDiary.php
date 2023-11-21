@@ -15,9 +15,8 @@
 <body>
     <?php include "../include/header.php" ?>
     <main>
-        <section class="site">
-            <div class="site_inner">
-                <div class="deco_info">
+        <section class="book_write_container">
+            <div class="book_write_container_inner">
                     <div class="deco_title">
                         <h2>다이어리 꾸미기</h2>
                         <img style="filter: invert(1);" src="../../assets/img/site_board_notice_cross.png" alt="">
@@ -45,7 +44,6 @@
                             <button type="submit" value="저장하기">저장하기</button>
                         </fieldset>
                     </form>
-                </div>
             </div>
         </section>
     </main>

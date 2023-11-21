@@ -7,21 +7,7 @@
     echo "<pre style='position:absolute; top:200px; left: 50px;'>";
     var_dump($_SESSION);
     echo "</pre>";
-?>
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>다이어리 완성!</title>
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="../../assets/css/board.css">
-    <link rel="stylesheet" href="../../assets/css/deco.css">
-    <!-- <link rel="stylesheet" href="../../assets/javascript/main.js"> -->
 
-</head>
-<?php
     // $sql = "ALTER TABLE myBoardComment AUTO_INCREMENT = 1";
     // $connect -> query($sql);
     
@@ -29,34 +15,16 @@
     $result = $connect -> query($sql);
     $info = $result -> fetch_array(MYSQLI_ASSOC);
 ?>
-<body style="overflow:hidden;">
+<!DOCTYPE html>
+<html lang="ko">
+<?php include "../include/head.php" ?>
+<body>
+    <?php include "../include/header.php" ?>
+    <main>
     <div class="login__popup">
         <div class="login__inner">
             <div class="deco__header">
-                <div class="deco_book">
-                    <div class="deco_book_inner">
-                        <div class="book_item">
-                            <div class="book_item_img_cont">
-                                <!-- <img src="/assets/img/test_bg.jpg" alt=""> -->
-<?php
-    // $info = $result -> fetch_array(MYSQLI_ASSOC);
-    echo "<img src='../../assets/img/testImg/".$info['testImageFile']."' alt='표지 이미지'>";
-?>
-                            </div>
-                            <div class="book_desc">
-                                <?php
-                                    echo "<p>".$info['color']."</p>";
-                                    echo "<p>".$info['youName']."</p>";
-                                ?>
-                            </div>
-                            <?php
-                                echo "<div class='book_front ".$info['color']."_front'></div>";
-                            ?>
-                            <!-- <div class="book_front"></div> -->
-                            <div class="book_back"></div>
-                        </div>
-                    </div>
-                </div>
+                <?php include "../common/book.php" ?>
                 <h3>Ta-Da!</h3>
                 <div class="login-txt">
                     <p>당신만의 다이어리가 완성되었어요!<br>이제 하단의 버튼을 클릭해 다꾸하러 가봐요!</p>
@@ -78,75 +46,7 @@
             <button type="button" class="btn-close"><img src="../../assets/img/login_close.png" alt="닫기버튼 입니다."></button>
         </div>
     </div>
-    <div class="site">
-        <div class="test">
-            <div class="hamburger_menu">
-                <img class="header_menu_close" src="../../assets/img/login_cross.png" alt="">
-                <a href="../board/board.php">공지사항</a>
-                <a href="../event/event.php">이벤트</a>
-                <a href="../rank/rank.php">이달의 순위</a>
-                <a href="../deco/decoDiary.php">다꾸하기</a>
-                <a href="../info/info.php">정보</a>
-                <a href="../faq/faq.php">FAQ</a>
-            </div>
-            <div class="header">
-                <div class="header_inner">
-                    <a href="../main/main.php"><img src="../../assets/img/site_header_logo.png" alt="logo"></a>
-                    <img class="hamburger_menu_open" src="../../assets/img/hamburger_btn.png" alt="">
-                    <a href="../board/board.php">공지사항</a>
-                    <a href="../event/event.php">이벤트</a>
-                    <a href="../rank/rank.php">이달의 순위</a>
-                    <a href="../deco/decoDiary.php">다꾸하기</a>
-                    <a href="../info/info.php">정보</a>
-                    <a href="../faq/faq.php">FAQ</a>
-                </div>
-            </div>
-            <div class="profile_cont" alt="로그인한 프로파일 이미지">
-                <?php if( isset($_SESSION['myMemberID'])){ ?>
-                    <span><a href="../login/logout.php" class="profile_cont_close"><img src="../../assets/img/login_cross.png" alt="로그아웃"></a></span>
-                    <!-- <img src="../../assets/img/site_header_profile.png" alt="logo"> -->
-                    <?php echo "<img src='../../assets/img/blog/".$_SESSION['youImageFile']."' alt='프로필 이미지' class='profile_image'>"; ?>
-                    <?php
-                        echo "<p>";
-                        echo "<a href='../mypage/myPage.php' class='mypage__btn'></a>안녕하세요 <em>".$_SESSION['youName']."님!</em>";
-                        echo "</p>";
-                        ?>
-                        <span class="btn_scroll_top">
-                            <a href="#">^</a>
-                        </span>
-                <?php } else { ?>
-                    <a style="display:none" href="../login/logout.php" class="profile_cont_close"><img src="../../assets/img/login_cross.png" alt="로그아웃"></a>
-                    <img src="../../assets/img/site_header_profile_no.png" class="loginplz" alt="logo">
-                    <p style="margin-left:0">여기를 눌러 로그인!</p>
-                    <span class="btn_scroll_top">
-                        <a href="#">^</a>
-                    </span>
-                    <script>
-                        document.querySelector(".btn-close").addEventListener("click", ()=>{
-                            document.querySelector(".login__popup").classList.remove("show");
-                        })
-            
-                        document.querySelector(".loginplz").addEventListener("click", ()=>{
-                            document.querySelector(".login__popup").classList.add("show");
-                        })
-                    </script>
-                <?php } ?> 
-            </div>
-<script>
-    //모바일시 햄버거 메뉴 구현
-    const menuOpen = document.querySelector(".hamburger_menu_open");
-    menuOpen.addEventListener("click", ()=>{
-        document.querySelector(".hamburger_menu").style.display="flex"
-        document.querySelector("body").style.overflow="hidden"
-    })
-    const menuClose = document.querySelector(".header_menu_close");
-    menuClose.addEventListener("click", ()=>{
-        document.querySelector(".hamburger_menu").style.display="none"
-        document.querySelector("body").style.overflow="auto"
-    })
-</script>
-        </div>
-        <!-- 헤더 -->
+    
 
 
         <div class="board">
@@ -236,6 +136,9 @@
                 <!-- test -->
         </div>
     </div>
+</main>
+<?php include "../include/footer.php" ?>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>        
         let emailCheck = false;
