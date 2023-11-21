@@ -10,26 +10,10 @@
 
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>공지사항</title>
-    <link rel="stylesheet" href="../../assets/css/board.css">
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <style>
-        .view-imge {
-            /* width: 500px; */
-            margin-top: 30px;
-            height: 500px;
-            border-radius: 25px;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-    </style>
-</head>
+<?php include "../include/head.php" ?>
 <body>
     <?php include "../include/header.php" ?>
+    <main>
     
     <div class="wrap">
         <div class="site">
@@ -218,8 +202,9 @@
 
             </div>
         </div>
-        <?php include "../include/footer.php" ?>
     </div>
+</main>
+    <?php include "../include/footer.php" ?>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script>

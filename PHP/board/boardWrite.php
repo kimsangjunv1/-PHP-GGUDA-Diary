@@ -8,18 +8,10 @@
 ?>
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>공지사항-글쓰기</title>
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="../../assets/css/board.css">
-
-</head>
+<?php include "../include/head.php" ?>
 <body>
-    
     <?php include "../include/header.php" ?>
+    <main>
     <div class="wrap">
         <div class="site">
             <div class="board">
@@ -73,8 +65,9 @@
                 </div>
             </div>
         </div>
-        <?php include "../include/footer.php" ?>
     </div>
+</main>
+    <?php include "../include/footer.php" ?>
 </body>
 <script src="../../assets/javascript/board.js"></script>
 <script src="../../assets/javascript/common.js"></script>

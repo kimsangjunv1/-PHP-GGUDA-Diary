@@ -13,8 +13,7 @@
 <?php include "../include/head.php" ?>
 <body>
     <?php include "../include/header.php" ?>
-    <?php include "../include/loginStatus.php" ?>
-    <div class="wrap">
+    
         <div class="site">
             <div class="board">
                 <div class="board_info">
@@ -164,7 +163,7 @@
                     <!-- test -->
             </div>
         </div>
-    </div>
+    
     <?php include "../include/footer.php" ?>
 </body>
 <script>document.querySelector(".header_inner a:nth-child(3)").classList.add("actived")</script>
