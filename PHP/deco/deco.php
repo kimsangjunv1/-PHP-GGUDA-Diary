@@ -20,41 +20,7 @@
         <div class="site">
             <div class="board">
                 <div class="board_info">
-<?php
-    $sql = "SELECT m.youName, m.youImageFile, t.myMemberID, m.regTime, t.color, t.testImageFile FROM test t JOIN myMember m ON(t.myMemberID = m.myMemberID) WHERE t.myMemberID = {$myMemberID}";
-    $result = $connect -> query($sql);
-    $info = $result -> fetch_array(MYSQLI_ASSOC);
-
-    if(!isset($info['myMemberID'])){
-        echo "<img src='../../assets/img/site_main_faq.png' class='header_icon_main' alt=''>";
-
-        } else {
-        echo "<style>";
-        echo ".board_info{";
-        echo "    margin-top: 200px !important;";
-        echo "}";
-        echo ".board_info h2{";
-        echo "    margin-top: 0px !important;";
-        echo "}";
-        echo "</style>";
-
-        echo "<div class='deco_book'>";
-        echo "<div class='deco_book_inner'>";
-        echo "<div class='book_item'>";
-        echo "<div class='book_item_img_cont'>";
-        echo "<img src='../../assets/img/testImg/".$info['testImageFile']."' alt='표지 이미지'>";
-        echo "</div>";
-        echo "<div class='book_desc'>";
-        echo "<p>".$info['color']."</p>";
-        echo "<p>".$info['youName']."</p>";
-        echo "</div>";
-        echo "<div class='book_front ".$info['color']."_front'></div>";
-        echo "<div class='book_back'></div>";
-        echo "</div>";
-        echo "</div>";
-        echo "</div>";
-    }
-?>
+                <?php include "../common/book.php" ?>
                     <img src="../../assets/img/site_main_faq_heart.png" class="header_icon_01" alt="">
                     <img src="../../assets/img/site_main_faq_heart.png" class="header_icon_02" alt="">
                     <img src="../../assets/img/site_main_faq_heart.png" class="header_icon_03" alt="">

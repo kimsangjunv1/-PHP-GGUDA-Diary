@@ -21,31 +21,26 @@
 <body>
     <?php include "../include/header.php" ?>
     <main>
-    <div class="login__popup">
-        <div class="login__inner">
-            <div class="deco__header">
-                <?php include "../common/book.php" ?>
-                <h3>Ta-Da!</h3>
-                <div class="login-txt">
-                    <p>당신만의 다이어리가 완성되었어요!<br>이제 하단의 버튼을 클릭해 다꾸하러 가봐요!</p>
-                    <!-- <p class="fail">모든 정보를 입력해주세요!</p> -->
-                </div>  
-                <img class="login-cross"src="../../assets/img/login_cross.png" alt="">
-            </div>
-            <div class="deco__cont">
-                <legend class="ir">회원가입을 위한 정보 입력영역</legend>
-                <section class="joinAgree">
+    <section class="popup_container">
+        <div class="popup_container_inner">
+            <?php include "../common/book.php" ?>
+            <h2 class="title">Ta-Da!</h2>
+            <p class="description">당신만의 다이어리가 완성되었어요!<br>이제 하단의 버튼을 클릭해 다꾸하러 가봐요!</p>
+            <!-- <img class="cross"src="../../assets/img/login_cross.png" alt=""> -->
+            <div class="btn_container">
+                <legend class="ir">다이어리 꾸미기로 넘어가기 위한 영역</legend>
+                <div class="btn_container_inner">
 <?php
     // echo "<button class='input__Btn' type='submit' onclick='location.href='decoSticker_".$info['color'].".php'' style='margin-bottom:10px'>다꾸하러가기</button>";
-    echo "<a href='decoSticker_".$info['color'].".php' class='input__Btn'>".'다꾸하러가기'."</a>";
-    echo "<a href='deco.php' class='input__Btn'>".'확인'."</a>";
+    echo "<a href='deco.php'>".'닫기'."</a>";
+    echo "<a href='decoSticker_".$info['color'].".php'  class='accept'>".'다꾸하러가기'."</a>";
     // echo "<button class='input__Btn' type='submit' onclick='location.href='deco.php''>확인</button>"
 ?>
-                </section>
+                </div>
             </div>
-            <button type="button" class="btn-close"><img src="../../assets/img/login_close.png" alt="닫기버튼 입니다."></button>
+            <!-- <button type="button" class="btn-close"><img src="../../assets/img/login_close.png" alt="닫기버튼 입니다."></button> -->
         </div>
-    </div>
+    </section>
     
 
 
